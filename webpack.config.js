@@ -18,7 +18,7 @@ module.exports = {
     assetModuleFilename: "images/[hash][ext][query]",
   },
   //模式 development,production
-  mode: "development",
+  mode: "production",
   //loader
   module: {
     rules: [

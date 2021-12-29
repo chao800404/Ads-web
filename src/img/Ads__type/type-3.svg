@@ -1,0 +1,44 @@
+<svg width="188" height="138" viewBox="0 0 188 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="type-3" clip-path="url(#clip0_3_97)">
+<rect width="187.71" height="137.08" fill="white"/>
+<path id="desktop" d="M181.37 136.58H6.34C3.11 136.58 0.5 133.96 0.5 130.74V6.34C0.5 3.11 3.12 0.5 6.34 0.5H181.36C184.59 0.5 187.2 3.12 187.2 6.34V130.74C187.21 133.97 184.59 136.58 181.37 136.58Z" stroke="#F0EEEE" stroke-miterlimit="10"/>
+<path id="tatble" d="M187.21 24.75H0.5V6.98C0.5 3.4 3.4 0.5 6.98 0.5H179.82C183.9 0.5 187.21 3.81 187.21 7.89V24.75V24.75Z" fill="#F0EEEE"/>
+<path id="search" d="M132.13 17.97H54.85C52.2 17.97 50.06 15.82 50.06 13.18C50.06 10.53 52.21 8.39 54.85 8.39H132.13C134.78 8.39 136.92 10.54 136.92 13.18C136.93 15.82 134.78 17.97 132.13 17.97Z" fill="white"/>
+<path id="button" d="M168.52 17.97H146.41C145.31 17.97 144.42 17.08 144.42 15.98V10.37C144.42 9.27 145.31 8.38 146.41 8.38H168.52C169.62 8.38 170.51 9.27 170.51 10.37V15.98C170.51 17.08 169.62 17.97 168.52 17.97Z" fill="#D8D8D8"/>
+<g id="LOGO">
+<path id="Vector" d="M33.23 9.94H7.60001V13.07H33.23V9.94Z" fill="#D8D8D8"/>
+<path id="Vector_2" d="M26.9 14.62H7.60001V17.75H26.9V14.62Z" fill="#D8D8D8"/>
+</g>
+<g id="content">
+<rect id="Rectangle 1" x="8" y="41" width="74.823" height="8" fill="#D8D8D8"/>
+<rect id="Rectangle 2" x="8" y="59" width="95" height="8" fill="#F0EEEE"/>
+<rect id="Rectangle 3" x="8" y="77" width="95" height="8" fill="#F0EEEE"/>
+<rect id="Rectangle 4" x="8" y="95" width="68.938" height="8" fill="#F0EEEE"/>
+</g>
+<g id="ads-layout" clip-path="url(#clip1_3_97)">
+<rect id="ads" x="126" y="39" width="54" height="67" fill="#F0EEEE"/>
+<g id="Group 1">
+<rect id="ads_2" x="128" y="46" width="47" height="51" fill="#D8D8D8"/>
+</g>
+<g id="Group 2">
+<path id="Vector 1" d="M145.74 66.1433H150.743V65.1433H145.74V66.1433Z" fill="#BCBCBC"/>
+<rect id="Rectangle 5" x="143.739" y="62.391" width="17.7614" height="19.0121" rx="1.5" stroke="#BCBCBC"/>
+<path id="Vector 2" d="M145.74 68.6448H150.743V67.6448H145.74V68.6448Z" fill="#BCBCBC"/>
+<path id="Vector 3" d="M145.74 76.9001H149.492L151.994 79.4017L153.245 73.1479L155.746 76.9001H158.873" stroke="#BCBCBC" stroke-width="0.8"/>
+<path id="Rectangle 7" d="M147.392 81.7303H158.275C158.598 81.7303 158.837 82.0334 158.761 82.3481L157.415 87.9001C157.36 88.1244 157.159 88.2823 156.929 88.2823H148.737C148.507 88.2823 148.306 88.1244 148.252 87.9001L146.906 82.3481C146.829 82.0334 147.068 81.7303 147.392 81.7303Z" stroke="#BCBCBC"/>
+<path id="Rectangle 8" d="M158.275 62.2697L147.392 62.2697C147.068 62.2697 146.829 61.9666 146.906 61.6519L148.252 56.0999C148.306 55.8756 148.507 55.7177 148.737 55.7177L156.929 55.7177C157.159 55.7177 157.36 55.8756 157.415 56.0999L158.761 61.6519C158.837 61.9666 158.598 62.2697 158.275 62.2697Z" stroke="#BCBCBC"/>
+<rect id="Rectangle 9" x="142.325" y="65.6871" width="0.878234" height="1.71735" stroke="#BCBCBC" stroke-width="0.8"/>
+<rect id="Rectangle 10" x="142.325" y="69.8827" width="0.878234" height="1.71735" stroke="#BCBCBC" stroke-width="0.8"/>
+</g>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M152.234 79.4681C156.782 79.4681 160.468 75.7816 160.468 71.234C160.468 66.6865 156.782 63 152.234 63C147.687 63 144 66.6865 144 71.234C144 75.7816 147.687 79.4681 152.234 79.4681ZM150.176 74.7994L156.351 71.2339L150.176 67.6685L150.176 74.7994Z" fill="white" fill-opacity="0.8"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_3_97">
+<rect width="187.71" height="137.08" fill="white"/>
+</clipPath>
+<clipPath id="clip1_3_97">
+<rect width="47" height="70" fill="white" transform="translate(128 38)"/>
+</clipPath>
+</defs>
+</svg>

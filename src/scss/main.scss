@@ -1,0 +1,28 @@
+@import './base';
+@import './header';
+@import './footer';
+@import './scrollbar';
+@import './message';
+
+
+@import './typography';
+@import './feature';
+@import './ourteam';
+@import './form';
+@import './demo';
+@import './process';
+
+@import './animate';
+
+@import './vendors';
+
+
+
+
+////////////////////////////////
+////animate
+
+@import './svganimate/featureAn';
+@import './svganimate/demoAn';
+@import './svganimate/processAn';
+@import './svganimate/progressCardAn';

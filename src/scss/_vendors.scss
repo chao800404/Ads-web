@@ -1,0 +1,33 @@
+// .swiper {
+//     margin-left: 0 !important;
+//     margin-right: 0 !important;
+//     overflow:visible !important;
+
+//     grid-column: 1 / -1;
+//     display: flex;
+// }
+
+
+
+
+// .swiper-slide {
+//     width: calc((100vw / 3) - 4rem) !important;
+//     border-radius: 1rem;
+// }
+
+
+
+
+
+.swiper-slide  {
+    overflow: visible !important;
+}
+
+.swiper {
+    overflow: visible !important;
+
+    @media only screen and (max-width:$bp-medium){
+       height: 100%;
+        
+    }
+}

@@ -1,0 +1,205 @@
+.feature_animate-prev {
+
+    transform:translateX(20rem);
+    opacity:0;
+    transition:all .5s ease-in-out;
+    
+    
+    .feature__server__img-bg{
+        svg {
+            #view {
+                #phoneview {
+                    transform: translateX(40rem);
+                    opacity:0;
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    transition: all .5s ease-in;
+                }
+                #adsview {
+                    transform: translateX(-10rem);
+                    opacity:0;
+                    transition: all .5s ease-in;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+.feature_animate-end {
+
+    transform:translateX(0rem);
+    opacity:1;
+    .feature__server__img-bg{
+        svg {
+            #view {
+                #phoneview {
+                    transform: translateX(0rem);
+                    opacity:1;
+                }
+                #adsview {
+                    transform: translateX(0rem);
+                    opacity:1;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.feature {
+
+    &:hover {
+        .option-an--1 {
+            svg {
+               #Group {
+                   #locationIcon{
+                       transform-box:fill-box;
+                       transform-origin: center;
+                       transform: rotate(0);
+                       @include demo-mixin(option1,5s){
+                           0%{transform: rotate(0deg);}
+                           50%{transform: rotate(-20deg);}
+                           100%{transform: rotate(0deg);}
+                       }
+                   }
+
+                   #hashMarkIcon {
+                       transform-box:fill-box;
+                       transform-origin: center;
+                       transform: rotate(0);
+                       @include demo-mixin(option1_1,5s){
+                        0%{transform: rotate(0deg);}
+                        50%{transform: rotate(20deg);}
+                        100%{transform: rotate(0deg);}
+                        }
+                   }
+
+                   #messageIcon2 {
+                       #Group_12 {
+                           #Group_13 {
+                                path{
+                                    &:nth-of-type(1){
+                                        
+                                        @include optin-mixin(option1_2,1s,0s){
+                                            from{opacity: 0;}
+                                            to{opacity: 1;}
+                                            
+                                        }
+                                    }
+
+                                    &:nth-of-type(2){
+                                        
+                                        @include optin-mixin(option1_3,1s,.2s){
+                                            from{opacity: 0;}
+                                            to{opacity: 1;}
+                                            
+                                        }
+                                    }
+
+                                    &:nth-of-type(3){
+                                        
+                                        @include optin-mixin(option1_4,1s,.4s){
+                                            from{opacity: 0;}
+                                            to{opacity: 1;}
+                                    
+                                        }
+                                    }
+                                }
+                           }
+                       }
+                   }
+
+                   #men {
+                       #left_hand {
+                        transform-box:fill-box;
+                        transform-origin: right bottom;
+                        @include demo-mixin(option1_1,5s){
+                            0%{transform: rotate(0deg);}
+                            50%{transform: rotate(15deg);}
+                            100%{transform: rotate(0deg);}
+                            }
+                       }
+                   }
+               }
+            }
+        }
+
+        .option-an--2 {
+            svg {
+                #Group_32 {
+                    #gear1{
+                        transform-box:fill-box;
+                        transform-origin: center;
+                        transform: rotate(0);
+
+                        @include demo-mixin(option1_5,50s){
+                            from{transform: rotate(0);}
+                            to{transform: rotate(360deg);}
+                        }
+                    }
+
+                    #gear2{
+                        transform-box:fill-box;
+                        transform-origin: center;
+                        transform: rotate(0);
+
+                        @include demo-mixin(option1_5,50s){
+                            from{transform: rotate(0);}
+                            to{transform: rotate(360deg);}
+                        }
+                    }
+                }
+            }
+        }
+
+        .option-an--3 {
+            svg {
+                #Group_33 {
+                    #women {
+                        #robe{
+                            transform-box: fill-box;
+                            transform-origin: top left;
+                            transform: rotate(0);
+
+                            @include demo-mixin(option1_6,5s){
+                                0%{transform: rotate(0);}
+                                50%{transform: rotate(5deg);}
+                                100%{transform: rotate(0);}
+                            } 
+                        }
+
+                        #hand{
+                            transform-box: fill-box;
+                            transform-origin: top right;
+                            transform: rotate(0);
+
+                            @include demo-mixin(option1_7,8s){
+                                0%{transform: rotate(0);}
+                                50%{transform: rotate(15deg);}
+                                100%{transform: rotate(0);}
+                            } 
+                        }
+
+                        #hair {
+                            transform-box: fill-box;
+                            transform-origin: top left;
+                            transform: rotate(0);
+
+                            @include demo-mixin(option1_8,8s){
+                                0%{transform: rotate(0);}
+                                50%{transform: rotate(15deg);}
+                                100%{transform: rotate(0);}
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

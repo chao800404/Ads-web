@@ -1,0 +1,132 @@
+@keyframes marquee {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes astroLife {
+    0% {
+        transform: translateX(-2rem);
+    }
+
+    50%{
+        transform: translateX(2rem);
+    }
+
+    100%{
+        transform: translateX(-2rem);
+    }
+}
+
+
+@keyframes earth {
+    0% {
+        transform: translateY(30%) rotate(0);
+    }
+
+    50% {
+        transform: translateY(30%) rotate(180deg);
+    }
+
+    100%{
+        transform: translateY(30%) rotate(360deg);
+    }
+}
+
+
+
+@keyframes airplaneLife {
+
+
+    0%{
+        transform: translate(5rem,5rem) rotate(0);
+        
+    }
+
+    20%{
+        transform: translate(3rem,2rem)  rotate(-15deg);
+    }
+
+    40%{
+        transform: translate(4rem,-1rem) ;
+    }
+
+    60%{
+        transform: translate(7rem,-3rem) rotate(0deg);
+    }
+
+    80%{
+        
+        transform: translate(3rem,3rem) ;
+    }
+
+    100% {
+
+        transform: translate(5rem,5rem) ;
+    }
+}
+
+
+// @keyframes titleAn {
+//     from {
+//         transform: translateY(20rem);
+//         opacity: 0;
+//     }
+//     to {
+//         transform: translateY(0rem);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes progressAn {
+//     from {
+//         stroke-dashoffset: 200;
+//     }
+
+//     to {
+//         stroke-dashoffset: 183;
+//     }
+// }
+
+
+
+@mixin animation-mixin($name) {
+    @keyframes #{$name} {
+      @content;
+    }
+
+    animation: $name 2s 1 ease;
+}
+
+
+@mixin planet-mixin($name,$delay) {
+    @keyframes #{$name} {
+      @content;
+    }
+
+    animation: $name 8s infinite cubic-bezier(.48,-0.48,.7,1.37);
+    animation-delay: $delay;
+}
+
+
+@mixin demo-mixin($name,$sec) {
+    @keyframes #{$name} {
+      @content;
+    }
+
+    animation: $name $sec infinite ease;
+}
+
+
+@mixin optin-mixin($name,$sec,$delay) {
+    @keyframes #{$name} {
+      @content;
+    }
+
+    animation: $name $sec infinite ease;
+    animation-delay: $delay;
+}

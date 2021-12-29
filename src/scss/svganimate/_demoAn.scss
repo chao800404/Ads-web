@@ -1,0 +1,30 @@
+.demo__an {
+    svg{
+        g{
+            #cloud1 {
+                @include demo-mixin(cloud,10s){
+                    0% {transform: translateX(2rem);}
+                    50% {transform: translateX(-2rem);}
+                    100% {transform: translateX(2rem);}
+                }
+            }
+
+            #cloud3 {
+                @include demo-mixin(cloud-1,12s){
+                    0% {transform: translateX(-2rem);}
+                    50% {transform: translateX(1rem);}
+                    100% {transform: translateX(-2rem);}
+                }
+            }
+            #Group_19 {
+                transform-origin: left;
+                @include demo-mixin(trolley,5s){
+                    0% {transform: rotate(5deg);}
+                    50% {transform: rotate(-5deg);}
+                    100% {transform: rotate(5deg);}
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,93 @@
+.progressCard-an-1 {
+    .process__card__progress{
+        svg{
+            circle{
+                animation: progressAn-1 2s ease 1;
+            }
+        }
+        
+    }
+    .process__card__plane::after {
+        animation: plane-1 2s ease 1;
+    }
+}
+
+.progressCard-an-2 {
+    .process__card__progress{
+        svg{
+            circle{
+                animation: progressAn-2 2s ease 1;
+            }
+        }
+        
+    }
+    .process__card__plane::after {
+        animation: plane-2 2s ease 1;
+    }
+    
+}
+
+.progressCard-an-3 {
+    .process__card__progress{
+        svg{
+            circle{
+                animation: progressAn-3 2s ease 1;
+            }
+        }
+        
+    }
+    .process__card__plane::after {
+        animation: plane-3 2s ease 1;
+    }
+}
+
+.progressCard-an-4 {
+    .process__card__progress{
+        svg{
+            circle{
+                animation: progressAn-4 2s ease 1;
+            }
+        }
+        
+    }
+    .process__card__plane::after {
+        animation: plane-4 2s ease 1;
+    }
+}
+
+.progressCard-an-5 {
+
+    .process__card__progress{
+        svg{
+            circle{
+                animation: progressAn-5 2s ease 1;
+            }
+        }
+    }
+    .process__card__plane::after {
+        animation: plane-5 2s ease 1;
+    }
+}
+
+.progressCard-an-6 {
+    
+    .process__card__progress{
+        svg{
+            circle{
+                animation: progressAn-6 2s ease 1;
+            }
+        }
+    }
+    .process__card__plane::after {
+        animation: plane-6 2s ease 1;
+    }
+}
+
+.progressDom-an-prev {
+    transform: translateY(20rem);
+}
+
+.progressDom-an-end {
+    transition: all .5s ease;
+    transform: translateY(0);
+}

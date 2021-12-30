@@ -58,13 +58,13 @@ const controHomePage = function (data) {
   homedemo.addHandlerStart(homedemo.addScrollView);
   homefeature.render(feature);
   homefeature.addHandlerOptions(homefeature.changeOptionContent);
-  homefeature.createObserver("0px", 0.25);
+  // homefeature.createObserver("0px", 0.25);
   homeourteam.render(ourteam);
   homeourteam.addSwiper();
-  homeourteam.createObserver("0px", 0.2);
+  // homeourteam.createObserver("0px", 0.2);
   homeconsultation.render(consultation, firm);
   homeconsultation.addSwiper();
-  homeconsultation.createObserver("0px", 0.2);
+  // homeconsultation.createObserver("0px", 0.2);
 };
 
 const init = function () {

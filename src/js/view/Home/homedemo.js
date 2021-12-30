@@ -14,9 +14,9 @@ class HomeDemo extends View {
             <p>${this._data.text}</p>
           </div>
           <button class="btn demo__btn get__start"><a href="#">Get Started</a></button>
-          <svg class="demo__svg demo__an" viewBox="0 0 727 847" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <div class="demo__svg demo__an" viewBox="0 0 727 847" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             ${demo}
-            </svg>
+            </div>
         </div> 
     `;
   }

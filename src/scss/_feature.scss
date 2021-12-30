@@ -26,6 +26,7 @@
     box-shadow: 0 1rem 2rem rgba($color: #111, $alpha: .2);
     width: 85%;
     margin: 0 auto; 
+    
 
     @media only screen and(max-width:$bp-large){
         width: 95%;
@@ -350,12 +351,13 @@
 
 
         @media only screen and (max-width:$bp-smallest){
-            grid-column: 3 / span 1;
-            grid-row: 3 / span 1;
-            padding: 0;
-            position: relative;
-            align-self: start;
-            top:0;
+            // grid-column: 3 / span 1;
+            // grid-row: 3 / span 1;
+            // padding: 0;
+            // position: relative;
+            // align-self: start;
+            // top:0;
+            display: none;
         }
 
         

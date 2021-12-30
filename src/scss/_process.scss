@@ -556,9 +556,7 @@
         &-text {
             h3 {
                 font-family: $font-primary;
-                @media only screen and (max-width:$bp-small){
-                    margin-left: 1rem;
-                }
+                
             }
 
             p {
@@ -571,7 +569,6 @@
                 @media only screen and (max-width:$bp-small){
                     font-size: 1.4rem;
                     padding: 0;
-                    margin-left: 1rem;
                 }
             }
 

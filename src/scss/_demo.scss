@@ -153,7 +153,11 @@
         }
 
         @media only screen and (max-width:$bp-small){
-            height: 40rem;
+            width: 100%;
+
+            svg{
+                width: 70%;
+            }
         }
     }
 }

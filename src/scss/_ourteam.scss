@@ -60,18 +60,6 @@
             grid-column: 1 / -1;
             grid-row: 2 / span 1;
 
-            @media only screen and (max-width:$bp-medium){
-                transform: translateX(-29vw);
-                
-            }
-
-            @media only screen and (max-width:$bp-smallest){
-                grid-column: none;
-            }
-
-            @media only screen and (max-width:$bp-small){
-                transform: translateX(-61vw);
-            }
         }
 
         &-btn {

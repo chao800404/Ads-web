@@ -25,6 +25,7 @@
 
 .swiper {
     overflow: visible !important;
+    touch-action:none !important;
 
     @media only screen and (max-width:$bp-medium){
        height: 100%;

@@ -27,7 +27,9 @@ module.exports = {
     assetModuleFilename: "images/[hash][ext][query]",
   },
   optimization: {
-    runtimeChunk: "single",
+    splitChunks: {
+      chunks: "all",
+    },
   },
   //模式 development,production
   mode: "production",

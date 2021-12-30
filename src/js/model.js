@@ -7,6 +7,8 @@ import firm from "../JSON/firm.json";
 
 import { ANCHOR } from "./congfig";
 
+import _ from "lodash";
+
 const firmImgs = [
   "firm-1",
   "firm-2",

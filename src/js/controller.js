@@ -67,11 +67,11 @@ const controHomePage = function (data) {
   // homeconsultation.createObserver("0px", 0.2);
 };
 
-const init = function () {
-  model.CreateStateobject(ANCHOR[0]);
-  resultPageVeiw.addHandlerPage(controPageResult);
-};
+// const init = function () {
+//   model.CreateStateobject(ANCHOR[0]);
+//   resultPageVeiw.addHandlerPage(controPageResult);
+// };
 
-init();
+// init();
 
 // console.log(home.demo.title);

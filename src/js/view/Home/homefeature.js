@@ -151,8 +151,9 @@ class HomeFeature extends View {
 
   _observerHandler(entries) {
     const [entry] = entries;
-    const title = entry.target.children[1].children[0];
-    const webImgBg = entry.target.children[1].children[4];
+    const title = document.querySelector(".feature__server__heading");
+    const webImgBg = document.querySelector(".feature__server__img");
+    console.log(webImgBg);
     if (!entry.isIntersecting) {
       title.style = "transform:translateX(-10rem); opacity:0";
       webImgBg.classList.remove("feature_animate-end");

@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
-const devMode = false;
+const devMode = true;
 
 module.exports = {
   //入口
@@ -18,7 +18,7 @@ module.exports = {
     assetModuleFilename: "images/[hash][ext][query]",
   },
   //模式 development,production
-  mode: "production",
+  mode: "development",
   //loader
   module: {
     rules: [

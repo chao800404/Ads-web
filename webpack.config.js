@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
-const devMode = false;
 
 module.exports = {
   //入口
@@ -25,7 +24,7 @@ module.exports = {
       {
         test: /\.css$|\.scss$/i,
         use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {

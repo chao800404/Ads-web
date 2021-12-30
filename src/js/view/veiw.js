@@ -27,13 +27,13 @@ export default class View {
     return newText;
   }
 
-  // createObserver(rootMargin, threshold) {
-  //   const options = {
-  //     root: null,
-  //     rootMargin,
-  //     threshold,
-  //   };
-  //   const observer = new IntersectionObserver(this._observerHandler, options);
-  //   observer.observe(this._parentElement);
-  // }
+  createObserver(rootMargin, threshold) {
+    const options = {
+      root: null,
+      rootMargin,
+      threshold,
+    };
+    const observer = new IntersectionObserver(this._observerHandler, options);
+    observer.observe(this._parentElement);
+  }
 }

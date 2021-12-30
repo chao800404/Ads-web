@@ -8,7 +8,7 @@
 }
 
 .feature {
-    background-image: linear-gradient(rgba(#f4f2f2,.2),rgba(#f0eeee,.3)),url('../img/whiteBG.png');
+    // background-image: linear-gradient(rgba(#f4f2f2,.2),rgba(#f0eeee,.3)),url('../img/whiteBG.png');
     background-size: cover;
     border-radius: 1rem;
     border: 1px solid var(--color-grey-light-1);
@@ -224,7 +224,7 @@
     // background-color: var(--color-primary);
     box-shadow: 1rem 1rem 2rem rgba($color: #111, $alpha: .2);
     border-radius: 1rem;
-    background-image: linear-gradient(rgba(#212936,1),rgba(#111A23,.8)), url('../img/background/universe.webp');
+    // background-image: linear-gradient(rgba(#212936,1),rgba(#111A23,.8)), url('../img/background/universe.webp');
     background-size: cover;
     background-position: right;
     border-right: 3px solid rgba(#fff,.2); 

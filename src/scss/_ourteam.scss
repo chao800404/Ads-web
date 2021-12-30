@@ -13,12 +13,12 @@
     grid-template-rows: 6rem min-content 1fr 6rem;
     grid-row-gap: 5rem;
     position: relative;
-    background-image: linear-gradient(to right ,rgba(#212936,.7), rgba(#111A23,.9)) ,url('../img/background/blue__geometry__bg.webp');
+    // background-image: linear-gradient(to right ,rgba(#212936,.7), rgba(#111A23,.9)) ,url('../img/background/blue__geometry__bg.webp');
     overflow: hidden;
 
     @media only screen and (max-width:$bp-large){
         font-size: 10rem;
-        background-image: linear-gradient(rgba(#212936,1),rgba(#111A23,.8)), url('../img/background/universe.webp');
+        // background-image: linear-gradient(rgba(#212936,1),rgba(#111A23,.8)), url('../img/background/universe.webp');
     }
 
 

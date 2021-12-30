@@ -7,12 +7,6 @@ import firm from "../JSON/firm.json";
 
 import { ANCHOR } from "./congfig";
 
-// const context = require.context("../img/firm", false);
-// const firmImgs = [];
-// context.keys().forEach((img) => {
-//   firmImgs.push(context(img));
-// });
-
 const firmImgs = [
   "firm-1",
   "firm-2",

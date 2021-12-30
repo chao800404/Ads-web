@@ -9,12 +9,25 @@ const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 
 module.exports = {
   //入口
-  entry: "./src/js/controller.js",
+  entry: {
+    controller: {
+      import: "./src/js/controller.js",
+      dependOn: "shared",
+    },
+    model: {
+      import: "./src/js/model.js",
+      dependOn: "shared",
+    },
+    shared: "lodash",
+  },
   //出口
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "index.[hash].js",
+    filename: "[name].[hash].js",
     assetModuleFilename: "images/[hash][ext][query]",
+  },
+  optimization: {
+    runtimeChunk: "single",
   },
   //模式 development,production
   mode: "production",

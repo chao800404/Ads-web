@@ -16,7 +16,7 @@
     grid-template-rows: minmax(min-content, 1.3fr) minmax(min-content , 1fr);
     grid-gap: 2rem;
     text-align: center;
-    // background-image: linear-gradient(var(--color-primary),var(--color-primary-dark));
+    
     background-color: transparent;
     position: relative;
 
@@ -34,7 +34,7 @@
 
     &::after {
         content: '';
-        // background-image: linear-gradient(.45turn,rgba(#212936,.9),rgba(#111A23,.4)),url('../img/background/blue__geometry__bg.webp');
+        background-image: linear-gradient(.45turn,rgba(#212936,.9),rgba(#111A23,.4)),url('../img/background/blue__geometry__bg.webp');
         background-size: cover;
         width: 100%;
         height: 100%;

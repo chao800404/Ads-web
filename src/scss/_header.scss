@@ -11,7 +11,9 @@
     background-color: var(--color-primary);
     z-index: 3000;
 
-
+    @media only screen and (max-width:$bp-smallest){
+        display: none;
+    }
 }
 
 .header__logo {

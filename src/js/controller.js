@@ -36,6 +36,7 @@ const controHomePage = function (data) {
   const { demo, feature, ourteam, consultation, firm } = data;
   homedemo.render(demo);
   homedemo.addHandlerStart(homedemo.addScrollView);
+  homedemo.addHandlerReize(homedemo.resizeDemo);
   homefeature.render(feature);
   homefeature.addHandlerOptions(homefeature.changeOptionContent);
   homefeature.createObserver("0px", 0.25);

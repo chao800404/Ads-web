@@ -154,10 +154,11 @@ class HomeFeature extends View {
     const title = document.querySelector(".feature__server__heading");
     const webImgBg = document.querySelector(".feature__server__img");
     if (!entry.isIntersecting) {
-      title.style = "transform:translateX(-10rem); opacity:0";
+      title.style =
+        "transform:translateX(-10rem); opacity:0; visibility:hidden;";
       webImgBg.classList.remove("feature_animate-end");
     } else {
-      title.style = "transform:translateX(0rem);opacity:1";
+      title.style = "transform:translateX(0rem);opacity:1; visibility: visble;";
       webImgBg.classList.add("feature_animate-end");
     }
   }

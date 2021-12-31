@@ -111,9 +111,9 @@ class HomeConsultation extends View {
   }
 
   addSwiper() {
-    const swiper = this._parentElement.querySelector(".process__mySwiper");
-    const nextBtn = this._parentElement.querySelector(".process__consult-next");
-    const prevBtn = this._parentElement.querySelector(".process__consult-prev");
+    const swiper = document.querySelector(".process__mySwiper");
+    const nextBtn = document.querySelector(".process__consult-next");
+    const prevBtn = document.querySelector(".process__consult-prev");
     swipers(swiper, nextBtn, prevBtn);
   }
 

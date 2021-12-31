@@ -407,8 +407,7 @@
         grid-row-gap: 1rem;
         grid-column:  2 / span 1;
         padding: 5rem 0;
-        align-self: center;
-        justify-self: start;
+        width: 80%;
         grid-template-rows: repeat(3,min-content);
         transition: all .3s;
         cursor: pointer;
@@ -421,6 +420,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            width: 100%;
         }
 
 
@@ -454,14 +454,12 @@
     }
 
     &--type {
-        width: 100%;
         
-        box-shadow: .5rem .5rem 3rem rgba(rgb(0, 0, 0),.3);
         transition: inherit;
 
         svg {
-            width: 100%;
             border-radius: 1rem;
+            box-shadow: .5rem .5rem 3rem rgba(rgb(0, 0, 0),.3);
         }
 
     }

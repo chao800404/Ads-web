@@ -174,7 +174,7 @@
             -webkit-filter:saturate(0.4);
             filter: saturate(0.4); 
 
-            animation: airplaneLife 10s ease-in-out infinite;
+            
 
 
             @media only screen and (max-width:$bp-large){
@@ -185,9 +185,14 @@
                 margin-left: -10rem;
             }
         }
-        
-
     }
+
+    &__airplane-an {
+        img {
+            animation: airplaneLife 10s ease-in-out infinite;
+        }
+    }
+
 
     &__earth {
         grid-row: 1 / -1;
@@ -209,17 +214,20 @@
             top: 50%;
             left: 0;
 
-            animation: earth 30s linear infinite;
+           
 
 
             @media only screen and (max-width:$bp-large){
                 top:20%;
             }
         }
-        
 
-        
+    }
 
+    &__earth-an {
+        img {
+            animation: earth 30s linear infinite;
+        }
     }
 }
 

@@ -621,7 +621,7 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(15.5rem,1fr));
-    grid-template-rows: repeat(auto-fit,5.5rem);
+    grid-template-rows: repeat(min-content,5.5rem);
     grid-row-gap: 2rem;
     grid-column-gap: .5rem;
 

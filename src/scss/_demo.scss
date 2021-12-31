@@ -157,16 +157,19 @@
             align-self: center;
             transform: translateY(-5rem);
         }
-        
-        @media only screen and (max-width:$bp-smallest){
-            transform: translateY(0rem);
-        }
 
+        @media only screen and (max-width:$bp-medium){
+            transform: translateY(-2rem);
+            svg{
+                width: 80%;
+            }
+        }
+        
         @media only screen and (max-width:$bp-small){
             width: 100%;
-
+            transform: translateY(0rem);
             svg{
-                width: 70%;
+                width: 60%;
             }
         }
     }

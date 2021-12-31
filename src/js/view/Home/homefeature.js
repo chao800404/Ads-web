@@ -137,10 +137,10 @@ class HomeFeature extends View {
         <div class="feature__server--type"> 
             ${imgs[index]}
           </div>
-            <h3 class="heading-4 feature__server__title">
+            <h4 class="feature__server__title heading-4">
               ${this._organizeText(server.title, 0, 1)}
               <spna>${this._organizeText(server.title, 1, 2)}  </spna>
-            </h3>
+            </h4>
             <p class="feature__server__text">
               ${server.text}
             </p>

@@ -89,7 +89,7 @@ a {
     grid-template-columns: [full-start] 0rem [center-start] repeat(8, [col-start] minmax(1rem ,20rem) [col-end]) [center-end] 0rem [full-end];
   }
 
-  @media only screen and (max-width:$bp-small){
+  @media only screen and (max-width:$bp-medium){
     grid-template-rows: 100vh repeat(3, min-content);
     grid-template-rows: calc(var(--vh,1vh)*100) repeat(3,min-content);
   }

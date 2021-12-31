@@ -10,12 +10,12 @@ const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 module.exports = {
   //入口
   entry: {
-    controller: {
-      import: "./src/js/controller.js",
-      dependOn: "shared",
-    },
     model: {
       import: "./src/js/model.js",
+      dependOn: "shared",
+    },
+    controller: {
+      import: "./src/js/controller.js",
       dependOn: "shared",
     },
     shared: "lodash",

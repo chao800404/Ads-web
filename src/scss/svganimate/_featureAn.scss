@@ -1,11 +1,12 @@
-.feature_animate-prev {
+.feature_animate-prev{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
 
-    transform:translateX(20rem);
-    opacity:0;
-    transition:all .5s ease-in-out;
-    
-    
-    .feature__server__img-bg{
+    .feature__server__img-bg {
+        transform:translateX(10%);
+        opacity:0;
+        transition:all .5s ease-in-out;
         svg {
             #view {
                 #phoneview {
@@ -22,18 +23,26 @@
                 }
             }
         }
+
     }
-
-
+    .feature__server__img-init{
+        opacity:0;
+        visibility: hidden;
+    }
 }
 
 
 
-.feature_animate-end {
 
-    transform:translateX(0rem);
-    opacity:1;
+
+
+.feature_animate-end{
+    opacity: 1;
+    visibility: visible;
+
     .feature__server__img-bg{
+        transform:translateX(0rem);
+        opacity:1;
         svg {
             #view {
                 #phoneview {
@@ -48,12 +57,16 @@
         }
     }
 
-
-    @media only screen and (max-width:$bp-smallest){
-        display: none;
+    .feature__server__img-init{
+        opacity:1;
+        visibility: visible;
     }
-
 }
+
+    // @media only screen and (max-width:$bp-smallest){
+    //     display: none;
+    // }
+
 
 
 .feature {

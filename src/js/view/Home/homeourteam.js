@@ -77,11 +77,15 @@ class HomeOurteamView extends View {
     const dom = [...entry.target.children[0].children];
     if (!entry.isIntersecting) {
       dom.forEach((dom) => (dom.style = "opacity:0"));
+      dom[2].classList.remove("ourteam__airplane-an");
+      dom[3].classList.remove("ourteam__earth-an");
     } else {
       dom.forEach((dom, index) => {
         dom.style = "opacity:1";
         dom.classList.add(classLists[index]);
       });
+      dom[2].classList.add("ourteam__airplane-an");
+      dom[3].classList.add("ourteam__earth-an");
     }
   }
 }

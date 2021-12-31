@@ -58,7 +58,7 @@ class HomeFeature extends View {
       ${this._markupServer(this._data.features__server.servers)}
 
       <div class="feature__server__img feature_animate-prev">
-        <div class="feature__server__img-bg">
+        <div class="feature__server__img-bg ">
           ${adsSvg}
         </div>
 

@@ -24,7 +24,7 @@
 
 
     @media only screen and (max-width:$bp-large){
-        grid-template-columns: 6rem repeat(2 , minmax(min-content, 2.5fr)) 6rem;
+        grid-template-columns: minmax(1rem,6rem) repeat(2 , minmax(min-content, 2.5fr)) minmax(1rem,6rem);
         grid-template-rows: 3rem min-content 1fr min-content 10rem;
 
         // justify-items: center;
@@ -142,7 +142,6 @@
 
     &__svg {
         width: 35vw;
-        min-width: 45rem;
         grid-column: 3 / span 1;
         grid-row: 1 / span 2;
         align-self: center;

@@ -3,11 +3,10 @@
 "strict mode";
 
 import "../scss/main.scss";
-// import Swiper JS
-// import Swiper from "swiper/bundle";
+import Swiper from "swiper/bundle";
 
-// import "swiper/css";
-// import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/navigation";
 ////////////////////////////////////////////////////////
 import resultPageVeiw from "./view/resultPageVeiw";
 import * as model from "./model";

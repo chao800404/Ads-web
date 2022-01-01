@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
 
 module.exports = {
   //入口
@@ -86,6 +87,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CompressionPlugin(),
     new ImageminWebpWebpackPlugin(),
+    new HtmlWebpackInlineSVGPlugin(),
   ],
 
   devtool: "source-map",

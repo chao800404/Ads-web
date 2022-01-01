@@ -47,7 +47,7 @@ const controHomePage = function (data) {
 };
 
 const init = function () {
-  // controHomePage(model.state);
+  controHomePage(model.state);
   resultPageVeiw.addHandlerPage(controPageResult);
 };
 

@@ -490,6 +490,7 @@
     overflow: hidden;
     border-radius: .5rem;
     max-width: 95rem;
+    touch-action: pan-y;
 
     @media only screen and (max-width:$bp-larger){
         max-width: 75rem;

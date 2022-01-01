@@ -47,16 +47,8 @@ const controHomePage = function (data) {
 };
 
 const init = function () {
-  controHomePage(model.state);
+  // controHomePage(model.state);
   resultPageVeiw.addHandlerPage(controPageResult);
 };
 
 init();
-
-window.addEventListener("touchstart", function (e) {
-  console.log("touchstart");
-
-  e.preventDefault();
-  e.stopImmediatePropagation();
-  e.stopPropagation();
-});

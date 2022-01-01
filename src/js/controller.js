@@ -52,3 +52,11 @@ const init = function () {
 };
 
 init();
+
+window.addEventListener("touchstart", function (e) {
+  console.log("touchstart");
+
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  e.stopPropagation();
+});

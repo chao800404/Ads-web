@@ -43,11 +43,11 @@ class HomeConsultation extends View {
           }</h2>
           <div class="process__consult__story">
             <div class="swiper mySwiper process__mySwiper">
-              <ul class="swiper-wrapper">
+              <div class="swiper-wrapper">
                 ${this._generateMarkupProgressSwiper(
                   this._data.consult_content
                 )}    
-              </ul>
+              </div>
               <div class="swiper-button-next process__consult-next"></div>
               <div class="swiper-button-prev process__consult-prev"></div>
             </div>
@@ -96,13 +96,13 @@ class HomeConsultation extends View {
       .map((data, index) => {
         const { title, text } = data;
         const html = `
-        <li class="process__consult__story__content swiper-slide  process__swiper-slide">
+        <div class="process__consult__story__content swiper-slide  process__swiper-slide">
             <div class="process__consult__story__content-img">${consults[index]}</div>
             <div  class="process__consult__story__content-text">
                 <h3 class="heading-3">${title}</h3>
                 <p>${text}</p>
             </div>
-        </li>
+        </div>
         `;
 
         return html;

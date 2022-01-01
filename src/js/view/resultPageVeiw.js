@@ -6,7 +6,9 @@ class ResultPageView extends View {
   //   _parentElement = document.querySelector(".container");
 
   addHandlerPage(handler) {
-    ["hashchange"].forEach((event) => window.addEventListener(event, handler));
+    ["load", "hashchange"].forEach((event) =>
+      window.addEventListener(event, handler)
+    );
   }
 }
 

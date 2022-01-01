@@ -34,11 +34,6 @@ class HomeDemo extends View {
     this._parentElement.addEventListener("resize", function () {});
   }
 
-  resizeDemo() {
-    const vh = window.innerHeight * 0.01;
-    this._parentElement.parentElement.style.setProperty("--vh", `${vh}px`);
-  }
-
   addScrollView() {
     const form = document.querySelector(".process");
     form.scrollIntoView({

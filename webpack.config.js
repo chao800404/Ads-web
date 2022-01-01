@@ -33,7 +33,7 @@ module.exports = {
     },
   },
   //模式 development,production
-  mode: "production",
+  mode: "development",
   //loader
   module: {
     rules: [

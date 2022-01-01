@@ -3,7 +3,6 @@
 "strict mode";
 
 import "../scss/main.scss";
-import Swiper from "swiper/bundle";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -48,7 +47,6 @@ const controHomePage = function (data) {
 };
 
 const init = function () {
-  model.CreateStateobject(ANCHOR[0]);
   controHomePage(model.state);
   resultPageVeiw.addHandlerPage(controPageResult);
 };

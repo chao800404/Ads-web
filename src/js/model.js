@@ -8,6 +8,7 @@ import firm from "../JSON/firm.json";
 import { ANCHOR } from "./congfig";
 
 import _ from "lodash";
+import homeourteam from "./view/Home/homeourteam";
 
 const firmImgs = [
   "firm-1",
@@ -27,14 +28,14 @@ const firmImgs = [
 ].map((img) => require(`../img/firm/${img}.webp`));
 
 export const state = {
-  demo: {},
-  feature: {},
-  ourteam: {},
-  consultation: {},
-  firm: {},
+  demo: Home.demo,
+  feature: Home.features,
+  ourteam: Home.ourteam,
+  consultation: Home.consultation,
+  firm: { firm, firmImgs },
 };
 
-export const CreateStateobject = function (hash) {
+export const CreateStateobject = async function (hash) {
   if (hash === ANCHOR[0]) {
     state.demo = Home.demo;
     state.feature = Home.features;

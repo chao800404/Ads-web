@@ -41,8 +41,8 @@ class HomeConsultation extends View {
           <h2 class="heading-2 process__consult__heading">${
             this._data.consult_title
           }</h2>
-          <div class="process__consult__story">
-            <div class="swiper mySwiper process__mySwiper">
+         
+            <div class="swiper mySwiper process__mySwiper process__consult__story">
               <div class="swiper-wrapper">
                 ${this._generateMarkupProgressSwiper(
                   this._data.consult_content
@@ -51,7 +51,7 @@ class HomeConsultation extends View {
               <div class="swiper-button-next process__consult-next"></div>
               <div class="swiper-button-prev process__consult-prev"></div>
             </div>
-          </div>
+      
           ${form}
           <div class="process__firm">
             <h2 class="process__firm__heading heading-2">

@@ -21,11 +21,10 @@
 
 .swiper-slide  {
     overflow: visible !important;
+    height: auto !important;
 }
 
 .swiper {
-    overflow: visible !important;
-
     @media only screen and (max-width:$bp-medium){
        height: 100%;
         

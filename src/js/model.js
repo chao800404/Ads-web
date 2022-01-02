@@ -1,14 +1,17 @@
 /** @format */
 
 import Home from "../JSON/Home.json";
-import About from "../JSON/About.json";
 
 import firm from "../JSON/firm.json";
-
-import { ANCHOR } from "./congfig";
-
 import _ from "lodash";
-import homeourteam from "./view/Home/homeourteam";
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, child, get, set } from "firebase/database";
+import { API_KEY } from "./congfig";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 const firmImgs = [
   "firm-1",
@@ -27,26 +30,40 @@ const firmImgs = [
   "firm-14",
 ].map((img) => require(`../img/firm/${img}.webp`));
 
-export const state = {
-  demo: Home.demo,
-  feature: Home.features,
-  ourteam: Home.ourteam,
-  consultation: Home.consultation,
-  firm: { firm, firmImgs },
+const firebaseConfig = {
+  apiKey: API_KEY,
+  authDomain: "shunjhin-web.firebaseapp.com",
+  databaseURL:
+    "https://shunjhin-web-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "shunjhin-web",
+  storageBucket: "shunjhin-web.appspot.com",
+  messagingSenderId: "939311086016",
+  appId: "1:939311086016:web:fcbb334f4cac7da5023025",
+  measurementId: "G-5BE8S561RS",
 };
 
-export const CreateStateobject = async function (hash) {
-  if (hash === ANCHOR[0]) {
-    state.demo = Home.demo;
-    state.feature = Home.features;
-    state.ourteam = Home.ourteam;
-    state.consultation = Home.consultation;
-    state.firm = { firm, firmImgs };
-  }
-  if (hash === ANCHOR[1]) {
-    state.demo = About.demo;
-    state.feature = About.features;
-    state.ourteam = About.ourteam;
-    state.consultation = "";
+export const state = {
+  demo: {},
+  feature: {},
+  ourteam: {},
+  consultation: {},
+  firm: {},
+};
+
+const app = initializeApp(firebaseConfig);
+const dbRef = ref(getDatabase());
+
+export const CreateStateobject = async function (hash = "home") {
+  try {
+    const res = await get(child(dbRef, `${hash}`));
+    if (res.exists()) {
+      const data = res.val();
+      state.demo = data.demo;
+      state.feature = data.features;
+      state.ourteam = data.ourteam;
+      state.consultation = data.consultation;
+    } else throw new Error("找不到相對應頁面!!");
+  } catch (err) {
+    console.log(err);
   }
 };

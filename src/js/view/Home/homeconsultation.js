@@ -9,6 +9,21 @@ import planet1 from "../../../img/Planet/planet-1.webp";
 import planet2 from "../../../img/Planet/planet-2.webp";
 import planet3 from "../../../img/Planet/planet-3.webp";
 import planet4 from "../../../img/Planet/planet-4.webp";
+import firm1 from "../../../img/firm/firm-1.webp";
+import firm2 from "../../../img/firm/firm-2.webp";
+import firm3 from "../../../img/firm/firm-3.webp";
+import firm4 from "../../../img/firm/firm-4.webp";
+import firm5 from "../../../img/firm/firm-5.webp";
+import firm6 from "../../../img/firm/firm-6.webp";
+import firm7 from "../../../img/firm/firm-7.webp";
+import firm8 from "../../../img/firm/firm-8.webp";
+import firm9 from "../../../img/firm/firm-9.webp";
+import firm10 from "../../../img/firm/firm-10.webp";
+import firm11 from "../../../img/firm/firm-11.webp";
+import firm12 from "../../../img/firm/firm-12.webp";
+import firm13 from "../../../img/firm/firm-13.webp";
+import firm14 from "../../../img/firm/firm-14.webp";
+
 const consults = [
   "consult-1",
   "consult-2",
@@ -18,16 +33,8 @@ const consults = [
   "consult-6",
 ].map((consult) => require(`../../../img/consult/${consult}.svg`));
 
-// const consult1 = require("../../../img/consult/consult-1.svg");
-// const consult2 = require("../../../img/consult/consult-2.svg");
-// const consult3 = require("../../../img/consult/consult-3.svg");
-// const consult4 = require("../../../img/consult/consult-4.svg");
-// const consult5 = require("../../../img/consult/consult-5.svg");
-// const consult6 = require("../../../img/consult/consult-6.svg");
-
 class HomeConsultation extends View {
   _parentElement = document.querySelector(".processes");
-  _frim;
   _generateMarkup() {
     return `
         <div class="process">
@@ -130,14 +137,29 @@ class HomeConsultation extends View {
   }
 
   _generateMakupFirm() {
-    const { firm, firmImgs } = this._data2;
-    return firm.firm
+    const firms = [
+      firm1,
+      firm2,
+      firm3,
+      firm4,
+      firm5,
+      firm6,
+      firm7,
+      firm8,
+      firm9,
+      firm10,
+      firm11,
+      firm12,
+      firm13,
+      firm14,
+    ];
+    return this._data.firm
       .map(
         (firmText, index) =>
           `
     <div class="process__firm__card">
-          <img src="${firmImgs[index]}" alt="firm" class="process__firm__img">
-          <h5 class="process__firm__name heading-5">${firmText}</h5>
+          <img src="${firms[index]}" alt="firm" class="process__firm__img">
+          <h5 class="process__firm__name heading-5">${firmText.firmText}</h5>
     </div>
     `
       )

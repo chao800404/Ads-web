@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 ////////////////////////////////////////////////////////
 import resultPageVeiw from "./view/resultPageVeiw";
 import * as model from "./model";
-
 import { ANCHOR } from "./congfig";
 
 ///////////////////////////////////////////////////////////
@@ -22,69 +21,32 @@ import homeconsultation from "./view/Home/homeconsultation";
 
 //////////////////////////////////////////////////////////////////
 
-const controPageResult = function () {
+const controPageResult = async function () {
   const hash = window.location.hash.slice(1);
-  model.CreateStateobject(hash);
+  const load = hash === "" ? undefined : hash;
+  await model.CreateStateobject(load);
+  console.log(model.state);
   if (hash === ANCHOR[0] || hash === "") {
-    controHomePage(model.state);
+    controHomePage();
   }
 };
-
-const controHomePage = function (data) {
-  const { demo, feature, ourteam, consultation, firm } = data;
-  homedemo.render(demo);
+const controHomePage = function () {
+  homedemo.render(model.state.demo);
   homedemo.addHandlerStart(homedemo.addScrollView);
-  homefeature.render(feature);
+  homefeature.render(model.state.feature);
   homefeature.addHandlerOptions(homefeature.changeOptionContent);
   homefeature.createObserver("0px", 0.25);
-  homeourteam.render(ourteam);
+  homeourteam.render(model.state.ourteam);
   homeourteam.addSwiper();
   homeourteam.createObserver("0px", 0.2);
-  homeconsultation.render(consultation, firm);
+  homeconsultation.render(model.state.consultation);
   homeconsultation.addSwiper();
   homeconsultation.createObserver("0px", 0.2);
 };
 
 const init = function () {
-  controHomePage(model.state);
+  // controHomePage(model.state);
   resultPageVeiw.addHandlerPage(controPageResult);
 };
 
 init();
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, child, get, set } from "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDAMnZbUNX90M2k8o5idwT0xCuvds80Moo",
-  authDomain: "shunjhin-web.firebaseapp.com",
-  databaseURL:
-    "https://shunjhin-web-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "shunjhin-web",
-  storageBucket: "shunjhin-web.appspot.com",
-  messagingSenderId: "939311086016",
-  appId: "1:939311086016:web:fcbb334f4cac7da5023025",
-  measurementId: "G-5BE8S561RS",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getDatabase();
-const dbRef = ref(getDatabase());
-
-get(child(dbRef, `ThesStudents/${"test1"}`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      console.log(snapshot.val());
-    } else {
-      console.log("No data available");
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-  });

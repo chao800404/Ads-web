@@ -4,9 +4,8 @@ export default class View {
   _data;
   _data2;
 
-  render(data, data2 = null) {
+  render(data) {
     this._data = data;
-    this._data2 = data2;
     const markup = this._generateMarkup();
     this._inner(markup);
   }

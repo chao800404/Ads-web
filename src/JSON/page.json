@@ -1,0 +1,182 @@
+{
+    "home":{
+        "demo":{
+            "title":"ADS EXAMINER",
+            "ch_title": "致力於提供免費的廣告檢查服務",
+            "text" : "為確保投遞廣告之前的準備是否完善 我們提供了免費的基礎診斷服務 這將會耗費您的較多的時間 而一切終將值得。"
+        },
+        "features": {
+            "introduce": [
+                {
+                    "title":"網頁設計 ",
+                    "en_title":"Web Design",
+                    "text" : "客製化網站設計、半客製化 WORDPRESS製作，給予最高權限不予任何限制擁有最多修復的資源管道。"
+                },
+    
+                {
+                    "title":"網路行銷",
+                    "en_title":"MARKETING",
+                    "text" : "先行檢查資源串接，提供既有項目給予網頁建議，擬定階段目標確實執行。"
+                },
+    
+                {
+                    "title":"廣告素材",
+                    "en_title":"Creative",
+                    "text" : "支援Google各項廣告素材要求，20組RESIZE整體設計JPG、MP4、HTML5、GIF。"
+                }
+            ],
+            "features__server": {
+                "title": "Create the creatives You need",
+                "ch_title": "創建您需要的廣告素材",
+                "servers": [
+                    {
+                        "title":"Static 靜態式廣告",
+                        "text": "導入最多精準流量，置頂/置底橫幅，關注度更高。"
+                    },
+                    {
+                        "title":"HTML5 互動式廣告",
+                        "text": "利用互動式媒體來推銷以及影響消費者購買決策，讓彼此間複雜並有維度的對話變為可能。"
+                    },
+                    {
+                        "title":"Motion 影音式廣告",
+                        "text": "製作影片廣告活動後，可以獲得更高的銷售量、提升網站流量、為您的商家打響知名度等等。"
+                    }
+                ]
+                
+            }
+            
+        },
+        "ourteam": {
+            "title":"Improve the process",
+            "ch_title": "擁有最豐富的專業團隊，提供專業問題解決方案",
+            "process": [" 資料收集彙整客戶需求，給予客戶最完整的資料報告並與客戶討論，最終給予設計部門建議開會做出相對應廣告之產品。",
+                        " 接受來自客戶的網路資訊資料，予以評估及檢查，並給予執行層面上的建議，提供資訊部協助處理。",
+                        "傾聽客戶需求結合資料分析，給予網站或者廣告素材的規劃建議，並結合素材呈現需求給予推薦格式。Ex MP4、Gif 、html5等。"
+                        ]
+        },
+        
+        "consultation" : {
+            "title":" Consultation and evaluation process",
+            "progress": [
+                ["12%","諮詢表單填寫","Degree of Dompletion"],
+                ["25%","專人預約完成","Appointment completed"],
+                ["50%","網站網域提供","Website domain provided"],
+                ["65%","網站資訊確認","information confirmation"],
+                ["80%","串接工具確認","API confirmation"],
+                ["100%","免費諮詢評估服務","Free consultation"]
+            ],
+            "consult_title":"諮詢評估流程",
+            "consult_content":[
+                {
+                    "title":"諮詢表單填寫",
+                    "text":"官網填單，快速諮詢有專人為您解釋"
+                },
+                {
+                    "title":"專人預約完成",
+                    "text":"致電確認詳細確認時間 並提供所需資料 使顧客能先行準備。"
+                },
+                {
+                    "title":"網站網域提供",
+                    "text":"依照顧客需求 評估網頁功能性並給予建議"
+                },
+                {
+                    "title":"網站資訊確認",
+                    "text":"確認網站各項資訊是否正確，及安全性建構性是否完整。"
+                },
+                {
+                    "title":"串接工具確認",
+                    "text":"各項API串接功能，確認是否有各類功能需求。"
+                },
+                {
+                    "title":"免費諮詢評估",
+                    "text":"免費評估服務以及專業性建議"
+                }
+            ],
+            "firm":["榴槤葛格","林匯國際","FILA","LITEON","IFME","PIDS","EYIC","寬闊建設","ERDS","MERRELL","PERO","PLEXTOR","SSSTC","CALL師傅"]
+            
+        }
+    },
+    "aboutus":{
+        "demo":{
+            "title":"GOOGLE ADWORD",
+            "text" : "合作基本需求，您需擁有!!"
+        },
+        "features":{
+            "introduce": [
+                {
+                    "title":"為廣告啟用自動標記功能",
+                    "text" : "將Google Analytics (分析)帳戶與Google Ads整合後，即可取得高品質的廣告和網站深入分析資料。。"
+                },
+    
+                {
+                    "title":"SEO 的成效分析",
+                    "text" : "Google官方提供給你的資料（網站排名、曝光、點擊）提交 sitemap、反向連結防弊文件…等。"
+                },
+    
+                {
+                    "title":"追蹤和管理平台",
+                    "text" : "將所有需要修改或者更新的代碼上傳至 GTM，，網站分析師與行銷人員不用去修改或是更新網站的原始碼。"
+                },
+
+                {
+                    "title":"Google merchant center",
+                    "text" : "為您的產品製作成效卓越的廣告和免費產品資訊。"
+                }
+            ],
+            "features__server": {
+                "text": "如您並未安裝或設置串接，我們能提供串接的基本要求諮詢，或者由我們為您提供串接以及設定服務並且共同擬定轉換標的，使一切變得簡易．如您不具備任何基本串接設置且無法自行完成也無法接受我們提供的串接服務，本公司將無法承攬有關Ads類別之一切廣告服務!!"
+            }
+        }
+    },
+
+    "create": {
+        "demo":{
+            "title":"Return on AD Spending"
+        },
+        "features":{
+            "introduce":[
+                "用HTML5製作多功能RWD橫幅廣告自FLASH被淘汰已行之有年，近年更普及應用於廣告投放平台HTML5廣告讓多媒體聯播網型廣告發揮更大效益。",
+                "除以動態方式吸引眼球，更因為有更多的資訊能在到達網頁之前傳遞以及互動，為每一次的最終點擊創造更高的轉化率。",
+                "目前WEB瀏覽器都支持HTML5的技術應用，除了能直接結合商城，更能結合影片以及文字的傳達，達到更好的效果。",
+                "使用HTML5製作的RWD自適應廣告素材，可根據橫幅廣告及視覺設計的屏幕分辨率自動調整為正確的尺寸。"
+            ]
+        }
+    },
+
+    "webdesign":{
+        "demo":{
+            "title":"Process Works",
+            "text" : "依照客戶需求製作",
+            "menu":["一頁式網站","半客製化網站","客製化網站","網域申請","RWD製作"]
+        },
+        "features":{
+            "introduce":[
+                {
+                    "title":"需求提供BRIEF",
+                    "text":"Demand to provide"
+                },
+                {
+                    "title":"提供網站架構表",
+                    "text":"Site architecture"
+                },
+                {
+                    "title":"核對檢查",
+                    "text":"Check"
+                },
+                {
+                    "title":"提供網站前端示意圖",
+                    "text":"Website design draft"
+                },
+                {
+                    "title":"確認風格",
+                    "text":"Confirm style"
+                },
+                {
+                    "title":"開始製作",
+                    "text":"Start making"
+                }
+            ]
+            
+        }
+    }
+}

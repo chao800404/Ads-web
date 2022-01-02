@@ -494,21 +494,18 @@
         max-width: 75rem;
     }
 
-    @media only screen and (max-width:$bp-large){
-        max-width: 65rem;
-    }
-
     @media only screen and (max-width:$bp-medium){
         grid-row: 7 / span 2;
-        max-width: calc(50vw - 5rem);
+        grid-column: 2 / span 1;
+        width: calc(50vw - 4rem);
         
     }
 
     @media only screen and (max-width:$bp-small){
         grid-column: 2 / span 1;
         grid-row: 10 / span 1;
-        max-width: calc(100vw - 8rem);
         border-radius: 1rem;
+        width: calc(100vw - 8rem);
     }
 
     
@@ -578,12 +575,9 @@
             @media only screen and (max-width:$bp-medium){
                 margin-right: 0;
                 text-align: center;
-            }
-
-            @media only screen and (max-width:$bp-smallest){
-                padding: 0;
                 width: 80%;
             }
+
 
             @media only screen and (max-width:$bp-small){
                 text-align: start;

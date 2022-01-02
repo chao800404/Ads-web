@@ -30,10 +30,6 @@ class HomeDemo extends View {
     });
   }
 
-  addHandlerReize(handler) {
-    this._parentElement.addEventListener("resize", function () {});
-  }
-
   addScrollView() {
     const form = document.querySelector(".process");
     form.scrollIntoView({

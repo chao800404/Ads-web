@@ -483,11 +483,10 @@
 }
 
 .process__consult__story {
-    grid-column: 2 / span 2;
+    // grid-column: 2 / span 2;
     grid-row: 6 / span 1;
-    overflow: hidden;
+    // overflow: hidden;
     border-radius: .5rem;
-    max-width: 95rem;
     display: flex;
 
     @media only screen and (max-width:$bp-larger){

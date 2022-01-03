@@ -2,7 +2,6 @@
 
 export default class View {
   _data;
-  _data2;
 
   render(data) {
     this._data = data;
@@ -12,11 +11,11 @@ export default class View {
 
   _inner(markup) {
     if (!markup) return;
-    this._clear();
+    this.clear();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
-  _clear() {
+  clear() {
     this._parentElement.innerHTML = "";
   }
 

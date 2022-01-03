@@ -55,7 +55,9 @@ const dbRef = ref(getDatabase());
 
 export const CreateStateobject = async function (hash = "home") {
   try {
-    const res = await get(child(dbRef, `${hash}`));
+    const hashs = hash.toLowerCase();
+    console.log(hashs);
+    const res = await get(child(dbRef, `${hashs}`));
     if (res.exists()) {
       const data = res.val();
       state.demo = data.demo;

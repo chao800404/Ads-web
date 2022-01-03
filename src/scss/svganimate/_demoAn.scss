@@ -28,3 +28,42 @@
     }
 }
 
+.webDesignDemo_an{
+    svg {
+        #Group {
+            #Group_25 {
+                
+                    @include demo-mixin(view_1,10s){
+                        0% {transform: translate(10rem,0);}
+                        50% {transform: translate(-2rem,-3rem);}
+                        100% {transform: translate(10rem,0);}
+                    }
+            }
+
+            #Group_14 {
+                
+                @include demo-mixin(view_2,10s){
+                    0% {transform: translate(-10rem,-5rem);}
+                    50% {transform: translate(1rem,0rem);}
+                    100% {transform: translate(-10rem,-5rem);}
+                }
+        }
+        }
+    }
+}
+
+.radar-img_an {
+    svg {
+        g {
+            #scanning{
+                transform-box: fill-box;
+                transform-origin: right;
+                @include demo-mixin(radar,10s){
+                    0% {transform: rotate(0deg);}
+                    100% {transform: rotate(-360deg);}
+                }
+            }
+            
+        }
+    }
+}

@@ -129,7 +129,7 @@
         }
     },
 
-    "create": {
+    "creatives": {
         "demo":{
             "title":"Return on AD Spending"
         },
@@ -145,11 +145,11 @@
 
     "webdesign":{
         "demo":{
-            "title":"Process Works",
-            "text" : "依照客戶需求製作",
-            "menu":["一頁式網站","半客製化網站","客製化網站","網域申請","RWD製作"]
+            "title":"Process Works"
         },
         "features":{
+            "title" : "依照客戶需求製作",
+            "menu":["一頁式網站","半客製化網站","客製化網站","網域申請","RWD製作"],
             "introduce":[
                 {
                     "title":"需求提供BRIEF",

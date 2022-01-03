@@ -7,6 +7,14 @@
   --color-secondary-light: #FF7443;
   --color-secondary-dark: #BC3C0E;
 
+  --color-tertiary:#ADC3C9;
+  --color-tertiary-dark:#365466;
+
+  --color-quarternary:#ED8F76;
+
+  --color-quinary:#F8C636;
+  --color-quinary-light:#FFDD5A;
+
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -68,7 +76,6 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color:var(--color-grey-light-2);
-  background-image: linear-gradient(to bottom , rgba(#fff,.3) , rgba(#fff,.4)), url('../img/whiteBG.png');
   background-size: cover;
 
 }
@@ -98,4 +105,26 @@ a {
   @media only screen and (max-width:$bp-medium){
     grid-template-rows: repeat(4,min-content);
   }
+}
+
+
+.webDesignBg {
+    background-color: var(--color-tertiary);
+    position: relative;
+    z-index: -1;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: repeat;
+        background-image: url(../img/webdesign/bg/webdesignBG.webp);
+        opacity: .5;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 10rem 10rem 15rem var(--color-tertiary) ,
+        inset -10rem -10rem 15rem var(--color-tertiary);
+    }
 }

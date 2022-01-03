@@ -4,7 +4,6 @@
     // display: flex;
     // align-items: center;
     // justify-content: center;
-    
     @media only screen and (max-widh:$bp-medium) {
         grid-row: 1 / span 1;
     }
@@ -168,5 +167,106 @@
             transform: translateY(0rem);
             
         }
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////
+////////  webdesignDemo
+
+.webDesign {
+    
+
+    &_image{
+        width: 80%;
+        position: relative;
+        align-self: center;
+        z-index: 10;
+        grid-row: 2 / span 2;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: var(--color-grey-light-1);
+            z-index: -1;
+            filter: blur(15rem);
+            opacity: .5;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    &_radar-img {
+        grid-row: 2 / span 1;
+        grid-column: 5 / span 1;
+        justify-self: start;
+        align-self: end;
+        width: 20%;
+        z-index: 10;
+        transform: translate(-50%,-50%);
+    }
+
+    
+    &_title {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        justify-self: end;
+        z-index: 10;
+
+        span {
+            display: block;
+            text-align: end;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////
+///////webAdsDemo
+
+.webAdsDemo {
+    background-color: var(--color-quarternary);
+    
+    &_container {
+        align-self: end;
+    }
+
+    &-img {
+        width: 55vw;
+        align-self: start;
+    }
+
+    &-title {
+        grid-column: 1 / -1;
+        grid-row: 3 / span 1;
+        justify-self: center;
+        font-size: 7rem;
+
+        span {
+            text-align: center;
+            display: block;
+            &:nth-of-type(2){
+                font-size: 3rem;
+                font-weight: 400;
+                
+            }
+        }
+    }
+}
+
+.webCreativeDemo {
+    background-image: linear-gradient(var(--color-quinary),var(--color-quinary-light));
+    &_container {
+        width: 100%;
+        grid-column: 3/span 3;
+        grid-row: 2 / span 1;
+        align-self: start;
+    }
+    &-title{
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+        align-self: end;
+        justify-self: center;
     }
 }

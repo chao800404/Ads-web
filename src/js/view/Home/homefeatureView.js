@@ -151,6 +151,10 @@ class HomeFeature extends View {
 
   _observerHandler(entries) {
     const [entry] = entries;
+    const limit = [...this._parentElement.children].some(
+      (domName) => domName.className === "feature"
+    );
+    if (!limit) return;
     const title = document.querySelector(".feature__server__heading");
     const webImgBg = document.querySelector(".feature__server__img");
     if (!entry.isIntersecting) {

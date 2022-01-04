@@ -2,6 +2,7 @@
     svg{
         g{
             #cloud1 {
+                will-change: transform;
                 @include demo-mixin(cloud,10s){
                     0% {transform: translateX(2rem);}
                     50% {transform: translateX(-2rem);}
@@ -10,6 +11,7 @@
             }
 
             #cloud3 {
+                will-change: transform;
                 @include demo-mixin(cloud-1,12s){
                     0% {transform: translateX(-2rem);}
                     50% {transform: translateX(1rem);}
@@ -17,6 +19,7 @@
                 }
             }
             #Group_19 {
+                will-change: transform;
                 transform-origin: left;
                 @include demo-mixin(trolley,5s){
                     0% {transform: rotate(5deg);}
@@ -29,10 +32,8 @@
 }
 
 .webDesignDemo_an{
-    svg {
-        #Group {
             #Group_25 {
-                
+                    will-change: transform;
                     @include demo-mixin(view_1,10s){
                         0% {transform: translate(10rem,0);}
                         50% {transform: translate(-2rem,-3rem);}
@@ -41,29 +42,23 @@
             }
 
             #Group_14 {
-                
+                will-change: transform;
                 @include demo-mixin(view_2,10s){
                     0% {transform: translate(-10rem,-5rem);}
                     50% {transform: translate(1rem,0rem);}
                     100% {transform: translate(-10rem,-5rem);}
                 }
         }
-        }
-    }
 }
 
 .radar-img_an {
-    svg {
-        g {
-            #scanning{
-                transform-box: fill-box;
-                transform-origin: right;
-                @include demo-mixin(radar,10s){
-                    0% {transform: rotate(0deg);}
-                    100% {transform: rotate(-360deg);}
-                }
+        #scanning{
+            will-change: transform;
+            transform-box: fill-box;
+            transform-origin: right;
+            @include demo-mixin(radar,10s){
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(-360deg);}
             }
-            
         }
-    }
 }

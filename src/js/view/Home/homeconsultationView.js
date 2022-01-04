@@ -166,32 +166,32 @@ class HomeConsultation extends View {
       .join("");
   }
 
-  _observerHandler(entries) {
-    const [entry] = entries;
-    const doms = [...entry.target.children[0].children];
-    const processCard = document.querySelectorAll(".process__card");
-    if (!entry.isIntersecting) {
-      // processCard.forEach((card, index) =>
-      //   card.classList.remove(`progressCard-an-${index + 1}`)
-      // );
-      // doms.forEach((dom) => {
-      //   dom.classList.remove("progressDom-an-end");
-      //   dom.classList.add("progressDom-an-prev");
-      // });
-    } else {
-      // processCard.forEach((card, index) =>
-      //   setTimeout(
-      //     () => card.classList.add(`progressCard-an-${index + 1}`),
-      //     index * 200
-      //   )
-      // );
-      // doms.forEach((dom, index) => {
-      //   setTimeout(() => {
-      //     dom.classList.add("progressDom-an-end");
-      //   }, index * 100);
-      // });
-    }
-  }
+  // _observerHandler(entries) {
+  //   const [entry] = entries;
+  //   const doms = [...entry.target.children[0].children];
+  //   const processCard = document.querySelectorAll(".process__card");
+  //   if (!entry.isIntersecting) {
+  //     processCard.forEach((card, index) =>
+  //       card.classList.remove(`progressCard-an-${index + 1}`)
+  //     );
+  //     doms.forEach((dom) => {
+  //       dom.classList.remove("progressDom-an-end");
+  //       dom.classList.add("progressDom-an-prev");
+  //     });
+  //   } else {
+  //     processCard.forEach((card, index) =>
+  //       setTimeout(
+  //         () => card.classList.add(`progressCard-an-${index + 1}`),
+  //         index * 200
+  //       )
+  //     );
+  //     doms.forEach((dom, index) => {
+  //       setTimeout(() => {
+  //         dom.classList.add("progressDom-an-end");
+  //       }, index * 100);
+  //     });
+  //   }
+  // }
 }
 
 export default new HomeConsultation();

@@ -84,10 +84,12 @@
 }
 
 .progressDom-an-prev {
-    transform: translateY(20rem);
+    will-change: transform;
+    transform: translate3D(0,20rem,0);
 }
 
 .progressDom-an-end {
+    will-change: transform;
     transition: all .5s ease;
-    transform: translateY(0);
+    transform: translate3D(0,0,0);
 }

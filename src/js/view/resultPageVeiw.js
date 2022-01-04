@@ -10,6 +10,10 @@ class ResultPageView extends View {
       window.addEventListener(event, handler)
     );
   }
+
+  windowsrolltoTop() {
+    window.scrollTo(0, 0);
+  }
 }
 
 export default new ResultPageView();

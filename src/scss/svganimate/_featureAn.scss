@@ -73,9 +73,8 @@
 
     &:hover {
         .option-an--1 {
-            svg {
-               #Group {
                    #locationIcon{
+                       will-change: transform;
                        transform-box:fill-box;
                        transform-origin: center;
                        transform: rotate(0);
@@ -87,6 +86,7 @@
                    }
 
                    #hashMarkIcon {
+                       will-change: transform;
                        transform-box:fill-box;
                        transform-origin: center;
                        transform: rotate(0);
@@ -97,12 +97,10 @@
                         }
                    }
 
-                   #messageIcon2 {
-                       #Group_12 {
-                           #Group_13 {
-                                path{
+                        #Group_13 {
+                            path{
                                     &:nth-of-type(1){
-                                        
+                                        will-change: transform;
                                         @include optin-mixin(option1_2,1s,0s){
                                             from{opacity: 0;}
                                             to{opacity: 1;}
@@ -111,7 +109,7 @@
                                     }
 
                                     &:nth-of-type(2){
-                                        
+                                        will-change: transform;
                                         @include optin-mixin(option1_3,1s,.2s){
                                             from{opacity: 0;}
                                             to{opacity: 1;}
@@ -120,41 +118,37 @@
                                     }
 
                                     &:nth-of-type(3){
-                                        
+                                        will-change: transform;
                                         @include optin-mixin(option1_4,1s,.4s){
                                             from{opacity: 0;}
                                             to{opacity: 1;}
                                     
                                         }
                                     }
-                                }
-                           }
                        }
                    }
 
-                   #men {
+                  
                        #left_hand {
                         transform-box:fill-box;
                         transform-origin: right bottom;
+                        will-change: transform;
                         @include demo-mixin(option1_1,5s){
                             0%{transform: rotate(0deg);}
                             50%{transform: rotate(15deg);}
                             100%{transform: rotate(0deg);}
                             }
                        }
-                   }
-               }
-            }
+                   
         }
 
         .option-an--2 {
-            svg {
-                #Group_32 {
+            
                     #gear1{
                         transform-box:fill-box;
                         transform-origin: center;
                         transform: rotate(0);
-
+                        will-change: transform;
                         @include demo-mixin(option1_5,50s){
                             from{transform: rotate(0);}
                             to{transform: rotate(360deg);}
@@ -165,25 +159,22 @@
                         transform-box:fill-box;
                         transform-origin: center;
                         transform: rotate(0);
-
+                        will-change: transform;
                         @include demo-mixin(option1_5,50s){
                             from{transform: rotate(0);}
                             to{transform: rotate(360deg);}
                         }
                     }
-                }
-            }
+        
         }
 
         .option-an--3 {
-            svg {
-                #Group_33 {
-                    #women {
+            
                         #robe{
                             transform-box: fill-box;
                             transform-origin: top left;
                             transform: rotate(0);
-
+                            will-change: transform;
                             @include demo-mixin(option1_6,5s){
                                 0%{transform: rotate(0);}
                                 50%{transform: rotate(5deg);}
@@ -195,7 +186,7 @@
                             transform-box: fill-box;
                             transform-origin: top right;
                             transform: rotate(0);
-
+                            will-change: transform;
                             @include demo-mixin(option1_7,8s){
                                 0%{transform: rotate(0);}
                                 50%{transform: rotate(15deg);}
@@ -207,7 +198,7 @@
                             transform-box: fill-box;
                             transform-origin: top left;
                             transform: rotate(0);
-
+                            will-change: transform;
                             @include demo-mixin(option1_8,8s){
                                 0%{transform: rotate(0);}
                                 50%{transform: rotate(15deg);}
@@ -215,8 +206,5 @@
                             } 
                         }
                     }
-                }
-            }
-        }
     }
 }

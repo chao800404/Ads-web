@@ -68,6 +68,8 @@ class HomeOurteamView extends View {
 
   _observerHandler(entries) {
     const [entry] = entries;
+    const limit = this._parentElement.children.length === 0;
+    if (limit) return;
     const classLists = [
       "ourteam__heading-an-prev",
       "swiper-an-prev",

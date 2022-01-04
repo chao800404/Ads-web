@@ -10,7 +10,6 @@ export default class View {
   }
 
   _inner(markup) {
-    if (!markup) return;
     this.clear();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
@@ -31,7 +30,24 @@ export default class View {
       rootMargin,
       threshold,
     };
-    const observer = new IntersectionObserver(this._observerHandler, options);
+    const observer = new IntersectionObserver(
+      this._observerHandler.bind(this),
+      options
+    );
+    return observer;
+  }
+
+  addObserver(observer) {
     observer.observe(this._parentElement);
+  }
+
+  removeObserver(observer) {
+    observer.unobserve(this._parentElement);
+  }
+
+  renderPageBg(background) {
+    const body = document.querySelector("body");
+    body.className = "";
+    body.classList.add(background);
   }
 }

@@ -35,7 +35,6 @@ class HomeDemo extends View {
     form.scrollIntoView({
       behavior: "smooth",
       block: "start",
-      inline: "nearest",
     });
   }
 }

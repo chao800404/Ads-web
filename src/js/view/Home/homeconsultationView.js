@@ -137,6 +137,7 @@ class HomeConsultation extends View {
   }
 
   _generateMakupFirm() {
+    console.log(this._data);
     const firms = [
       firm1,
       firm2,
@@ -159,7 +160,7 @@ class HomeConsultation extends View {
           `
     <div class="process__firm__card">
           <img src="${firms[index]}" alt="firm" class="process__firm__img">
-          <h5 class="process__firm__name heading-5">${firmText.firmText}</h5>
+          <h5 class="process__firm__name heading-5">${this._data.firm[index]}</h5>
     </div>
     `
       )

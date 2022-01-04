@@ -12,7 +12,9 @@ class ResultPageView extends View {
   }
 
   windowsrolltoTop() {
-    window.scrollTo(0, 0);
+    document
+      .querySelector("body")
+      .scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 

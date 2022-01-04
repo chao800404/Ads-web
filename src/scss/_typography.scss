@@ -10,6 +10,15 @@
     height: 5rem;
     background-color: var(--color-tertiary-dark);
     
+
+    @media only screen and (max-width:$bp-large){
+        width: 4rem;
+        height: 3rem;
+    }
+
+    @media only screen and (max-width:$bp-larger){
+       display: none;
+    }
 }
 
 @mixin textStyle($preColor,$afterColor,$fontS,$deg) {
@@ -253,10 +262,24 @@
     grid-template-columns: minmax(6rem,1fr) minmax(0,2.5fr) repeat(2 , minmax(min-content, 2.5fr)) minmax(0,2.5fr)  minmax(6rem,1fr);
     grid-template-rows: calc(1fr - 6rem) repeat(3,1fr);
 
+    @media only screen and (max-width:$bp-large){
+        grid-template-columns: minmax(6rem,1fr)  repeat(2 , minmax(min-content, 2.5fr))  minmax(6rem,1fr);
+        grid-template-rows: 20rem repeat(3,min-content);
+    }
+
+    @media only screen and (max-width:$bp-small){
+        grid-template-rows: 10rem repeat(3,min-content);
+    }
+
     &-container {
         grid-column: 3 / span 2;
         grid-row: 2 / span 1;
         justify-self: center;
         align-self: center;
+
+        @media only screen and (max-width:$bp-large){
+            grid-column: 2 / span 2;
+            
+        }
     }
 }

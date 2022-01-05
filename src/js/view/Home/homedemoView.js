@@ -1,7 +1,6 @@
 /** @format */
 
 import View from "../veiw";
-const demo = require("../../../img/demo/ADS EMAMINER.svg");
 
 class HomeDemo extends View {
   _parentElement = document.querySelector(".demos");
@@ -14,8 +13,8 @@ class HomeDemo extends View {
             <p>${this._data.text}</p>
           </div>
           <button class="btn demo__btn get__start"><a href="#">Get Started</a></button>
-          <div class="demo__svg demo__an" viewBox="0 0 727 847" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            ${demo}
+          <div class="demo__svg demo__an">
+              <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_ujvyzbbd.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
             </div>
         </div> 
     `;

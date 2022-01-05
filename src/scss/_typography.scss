@@ -261,6 +261,7 @@
     display: grid;
     grid-template-columns: minmax(6rem,1fr) minmax(0,2.5fr) repeat(2 , minmax(min-content, 2.5fr)) minmax(0,2.5fr)  minmax(6rem,1fr);
     grid-template-rows: calc(1fr - 6rem) repeat(3,1fr);
+    position: relative;
 
     @media only screen and (max-width:$bp-large){
         grid-template-columns: minmax(6rem,1fr)  repeat(2 , minmax(min-content, 2.5fr))  minmax(6rem,1fr);

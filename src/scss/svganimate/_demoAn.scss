@@ -55,7 +55,9 @@
         #scanning{
             will-change: transform;
             transform-box: fill-box;
-            transform-origin: right;
+            transform-origin: center;
+            width: 100%;
+            position: absolute;
             @include demo-mixin(radar,10s){
                 0% {transform: rotate(0deg);}
                 100% {transform: rotate(-360deg);}

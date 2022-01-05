@@ -28,6 +28,7 @@ import webCreativeView from "./view/webCreative/webCreativeView";
 //////////////////////////////////////////////////////////////////
 
 import webAdsDemoView from "./view/webAds/webAdsDemoView";
+import webCreativeFeatureView from "./view/webCreative/webCreativeFeatureView";
 
 const controPageResult = async function () {
   const hash = window.location.hash.slice(1);
@@ -40,7 +41,7 @@ const controPageResult = async function () {
   if (hash === ANCHOR[3]) controlWebAdsPage();
 };
 const controHomePage = function () {
-  homedemo.renderPageBg(PAGE_BG[0]);
+  // homedemo.renderPageBg(PAGE_BG[0]);
   homedemo.render(model.state.demo);
   homedemo.addHandlerStart(homedemo.addScrollView);
   homefeature.render(model.state.feature);
@@ -56,7 +57,7 @@ const controHomePage = function () {
 };
 
 const controlWebDesignPage = function () {
-  webDemoView.renderPageBg(PAGE_BG[1]);
+  // webDemoView.renderPageBg(PAGE_BG[1]);
   webDemoView.render(model.state.demo);
   webFeatureView.render(model.state.feature);
   webFeatureView.addHandlerList(webFeatureView.changeListImg);
@@ -67,6 +68,7 @@ const controlWebDesignPage = function () {
 
 const controlWebCreative = function () {
   webCreativeView.render(model.state.demo);
+  webCreativeFeatureView.render();
 };
 
 const controlWebAdsPage = function () {

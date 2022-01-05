@@ -4,6 +4,8 @@ import View from "../veiw";
 const webdesingDemoSvg = require("../../../img/webdesign/demo/webdesignDemo.svg");
 const radar = require("../../../img/webdesign/demo/radars.svg");
 
+const radar1 = require("../../../img/webdesign/demo/radars1.svg");
+
 class WebDemo extends View {
   _parentElement = document.querySelector(".demos");
 
@@ -15,7 +17,7 @@ class WebDemo extends View {
             ${webdesingDemoSvg}
         </div>
         <div class="webDesign_radar-img radar-img_an">
-            ${radar}
+            ${radar1}
         </div>
         <h1 class="heading-1--1 webDesign_title">
             <span>${this._organizeText(title, 0, 1)}</span>

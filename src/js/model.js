@@ -65,7 +65,17 @@ export const CreateStateobject = async function (hash = "home") {
       state.ourteam = data.ourteam;
       state.consultation = data.consultation;
     } else throw new Error("找不到相對應頁面!!");
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    alert(error);
+  }
+};
+
+export const lottieFileAJAX = async function (urls) {
+  try {
+    const res = await fetch(urls);
+    const url = res.url;
+    state.demo.svgUrl = url;
+  } catch (error) {
+    alert(error);
   }
 };

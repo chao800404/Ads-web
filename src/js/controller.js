@@ -9,7 +9,12 @@ import "swiper/css/navigation";
 ////////////////////////////////////////////////////////
 import resultPageVeiw from "./view/resultPageVeiw";
 import * as model from "./model";
-import { ANCHOR, PAGE_BG } from "./congfig";
+import {
+  ANCHOR,
+  PAGE_BG,
+  HOMEDEMO_SVG_AN,
+  WEBDESIGNDEMO_SVG_AN,
+} from "./congfig";
 
 ///////////////////////////////////////////////////////////
 import homedemo from "./view/Home/homedemoView";
@@ -35,8 +40,14 @@ const controPageResult = async function () {
   const load = hash === "" ? undefined : hash;
   await model.CreateStateobject(load);
   resultPageVeiw.windowsrolltoTop();
-  if (hash === ANCHOR[0] || hash === "") controHomePage();
-  if (hash === ANCHOR[1]) controlWebDesignPage();
+  if (hash === ANCHOR[0] || hash === "") {
+    await model.lottieFileAJAX(HOMEDEMO_SVG_AN);
+    controHomePage();
+  }
+  if (hash === ANCHOR[1]) {
+    await model.lottieFileAJAX(WEBDESIGNDEMO_SVG_AN);
+    controlWebDesignPage();
+  }
   if (hash === ANCHOR[2]) controlWebCreative();
   if (hash === ANCHOR[3]) controlWebAdsPage();
 };

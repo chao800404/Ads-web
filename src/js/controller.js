@@ -14,6 +14,7 @@ import {
   PAGE_BG,
   HOMEDEMO_SVG_AN,
   WEBDESIGNDEMO_SVG_AN,
+  WEBDESIGN_SVG_AN_CONTENTS,
 } from "./congfig";
 
 ///////////////////////////////////////////////////////////
@@ -40,18 +41,13 @@ const controPageResult = async function () {
   const load = hash === "" ? undefined : hash;
   await model.CreateStateobject(load);
   resultPageVeiw.windowsrolltoTop();
-  if (hash === ANCHOR[0] || hash === "") {
-    await model.lottieFileAJAX(HOMEDEMO_SVG_AN);
-    controHomePage();
-  }
-  if (hash === ANCHOR[1]) {
-    await model.lottieFileAJAX(WEBDESIGNDEMO_SVG_AN);
-    controlWebDesignPage();
-  }
+  if (hash === ANCHOR[0] || hash === "") controHomePage();
+  if (hash === ANCHOR[1]) controlWebDesignPage();
   if (hash === ANCHOR[2]) controlWebCreative();
   if (hash === ANCHOR[3]) controlWebAdsPage();
 };
-const controHomePage = function () {
+const controHomePage = async function () {
+  await model.lottieFileAJAX(HOMEDEMO_SVG_AN);
   homedemo.renderPageBg(PAGE_BG[0]);
   homedemo.render(model.state.demo);
   homedemo.addHandlerStart(homedemo.addScrollView);
@@ -67,7 +63,9 @@ const controHomePage = function () {
   homeconsultation.addSwiper();
 };
 
-const controlWebDesignPage = function () {
+const controlWebDesignPage = async function () {
+  await model.lottieFileAJAX(WEBDESIGNDEMO_SVG_AN);
+  await model.lottieFileAJAX(WEBDESIGN_SVG_AN_CONTENTS);
   webDemoView.renderPageBg(PAGE_BG[1]);
   webDemoView.render(model.state.demo);
   webFeatureView.render(model.state.feature);

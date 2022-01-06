@@ -56,10 +56,9 @@ const dbRef = ref(getDatabase());
 export const CreateStateobject = async function (hash = "home") {
   try {
     const hashs = hash.toLowerCase();
-    console.log(hashs);
-    const res = await get(child(dbRef, `${hashs}`));
-    if (res.exists()) {
-      const data = res.val();
+    const firebaseRes = await get(child(dbRef, `${hashs}`));
+    if (firebaseRes.exists()) {
+      const data = firebaseRes.val();
       state.demo = data.demo;
       state.feature = data.features;
       state.ourteam = data.ourteam;
@@ -72,9 +71,15 @@ export const CreateStateobject = async function (hash = "home") {
 
 export const lottieFileAJAX = async function (urls) {
   try {
-    const res = await fetch(urls);
-    const url = res.url;
-    state.demo.svgUrl = url;
+    if (Array.isArray(urls)) {
+      const fetchArr = urls.map((url) => fetch(url));
+      const allRes = await Promise.all(fetchArr);
+      state.feature.svg = allRes.map((url) => url.url);
+    } else {
+      const res = await fetch(urls);
+      const url = res.url;
+      state.demo.svgUrl = url;
+    }
   } catch (error) {
     alert(error);
   }

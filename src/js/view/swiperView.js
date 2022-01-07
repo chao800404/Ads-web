@@ -12,5 +12,7 @@ export const swipers = function (swiper, nextBtn, prevBtn) {
       nextEl: nextBtn,
       prevEl: prevBtn,
     },
+    observeParents: true,
+    observer: true,
   });
 };

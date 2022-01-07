@@ -156,6 +156,7 @@
         align-self: center;
         justify-self: center;
         z-index: 20;
+        will-change: transform;
         animation: astroLife 10s ease infinite;
 
     }
@@ -165,6 +166,7 @@
         grid-column: 1 / span 2;
         overflow: hidden;
         z-index: 2;
+        
 
         img {
             width: 15rem;
@@ -188,7 +190,9 @@
     }
 
     &__airplane-an {
+        
         img {
+            will-change: transform;
             animation: airplaneLife 10s ease-in-out infinite;
         }
     }
@@ -226,6 +230,7 @@
 
     &__earth-an {
         img {
+            will-change: transform;
             animation: earth 30s linear infinite;
         }
     }

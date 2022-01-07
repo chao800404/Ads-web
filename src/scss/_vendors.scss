@@ -29,3 +29,7 @@
     width: 100% !important;
     overflow: visible !important;
 }
+
+.swiper-wrapper{
+    will-change: transform;
+}

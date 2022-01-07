@@ -14,7 +14,7 @@ class HomeDemo extends View {
           </div>
           <button class="btn demo__btn get__start"><a href="#">Get Started</a></button>
           <div class="demo__svg demo__an">
-              <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_ujvyzbbd.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+              <lottie-player src="${this._data.svgUrl}"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"   autoplay loop></lottie-player>
             </div>
         </div> 
     `;

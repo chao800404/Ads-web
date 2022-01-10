@@ -27,9 +27,9 @@
     background: linear-gradient($deg, $preColor 50% ,$afterColor 50%);
     background-image: -webkit-linear-gradient($deg, $preColor 50% ,$afterColor 50%);
     background-clip: text;
+    color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: $fontS;
 }
 
@@ -56,7 +56,6 @@
 
 .heading-1 {
     @extend %heading;
-    @include textStyle(var(--color-grey-light-3),var(--color-grey-light-4),5vw,270deg);
     @supports(-webkit-text-stroke: .2px){
         -webkit-text-stroke: .1px var(--color-grey-dark-3);
     }

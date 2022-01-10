@@ -75,13 +75,33 @@
             span {
                 font-size: 1.5vw;
                 font-family: $font-primary;
-                line-height: 0;
                 letter-spacing: .8rem;
                 color:var(--color-secondary);
                 display: block;
                 font-weight: 600;
-                -webkit-text-stroke: 0;
 
+                &:nth-of-type(1){
+                    @include textStyle(var(--color-grey-light-3),var(--color-grey-light-4),5vw,270deg);
+                    -webkit-text-stroke: .1px var(--color-grey-dark-3);
+                    
+                    
+                    @media only screen and (max-width:$bp-large){
+                        font-size: 10rem;
+                    }
+                    @media only screen and (max-width:$bp-smallest){
+                        font-size: 8rem;
+                        
+                    }
+                    @media only screen and (max-width:$bp-small){
+                        font-size: 14.5vw;
+                        -webkit-text-stroke: 1.5px var(--color-grey-dark-3);
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    line-height: 0;
+                    -webkit-text-stroke: 0;
+                }
 
                 @media only screen and (max-width:$bp-large){
                     font-size: 3rem;

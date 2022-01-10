@@ -285,10 +285,10 @@
             color:var(--color-secondary);
             
             &:nth-child(1){
-                @include textStyle(var(--color-grey-light-3),var(--color-grey-dark-3),5rem,180deg);
+                @include textStyle(var(--color-grey-light-3),var(--color-grey-dark-3),5rem,270deg);
 
                 @media only screen and (max-width:$bp-small){
-                    @include textStyle(var(--color-grey-light-3),var(--color-grey-dark-3),4rem,180deg);
+                    @include textStyle(var(--color-grey-light-3),var(--color-grey-dark-3),4rem,270deg);
                 }
             }
             &:nth-child(3){

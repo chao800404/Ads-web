@@ -9,7 +9,10 @@ class HomeDemo extends View {
     return `
     <div class="demo">
           <div class="demo__text">
-            <h1 class="heading-1">${this._data.title} <span>${this._data.ch_title}</span></h1>
+            <h1 class="heading-1">
+            <span>${this._data.title}</span>
+            <span>${this._data.ch_title}</span>
+            </h1>
             <p>${this._data.text}</p>
           </div>
           <button class="btn demo__btn get__start"><a href="#">Get Started</a></button>

@@ -11,6 +11,8 @@
   --color-tertiary-dark:#365466;
 
   --color-quarternary:#ED8F76;
+  --color-quarternary-dark:#e08369;;
+  --color-quarternary-dark-2:#c76c53;
 
   --color-quinary:#F8C636;
   --color-quinary-light:#FFDD5A;
@@ -36,6 +38,7 @@ $bp-larger:72em;  //1140px
 $bp-large:60em;  //960px
 
 $bp-medium:55em; //880px
+$bp-mediumest:43.75em; // 700px
 
 $bp-smallest:48.75em;  //780px
 $bp-small:37.5em; // 600px
@@ -132,4 +135,13 @@ a {
         box-shadow: inset 10rem 10rem 15rem var(--color-tertiary) ,
         inset -10rem -10rem 15rem var(--color-tertiary);
     }
+}
+
+.creativeBg {
+  background-image: linear-gradient(var(--color-quinary),var(--color-quinary-light));
+}
+
+
+.adsBg {
+  background-image: linear-gradient(var(--color-quarternary),var(--color-quarternary-dark));
 }

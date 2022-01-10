@@ -31,7 +31,7 @@ const consults = [
   "consult-4",
   "consult-5",
   "consult-6",
-].map((consult) => require(`../../../img/consult/${consult}.svg`));
+].map((consult) => require(`../../../img/consult/${consult}.png`));
 
 class HomeConsultation extends View {
   _parentElement = document.querySelector(".processes");
@@ -104,7 +104,7 @@ class HomeConsultation extends View {
         const { title, text } = data;
         const html = `
         <div class="process__consult__story__content swiper-slide  process__swiper-slide">
-            <div class="process__consult__story__content-img">${consults[index]}</div>
+            <img class="process__consult__story__content-img" src="${consults[index]}">
             <div  class="process__consult__story__content-text">
                 <h3 class="heading-3">${title}</h3>
                 <p>${text}</p>

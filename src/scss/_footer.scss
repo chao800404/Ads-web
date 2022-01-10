@@ -4,7 +4,7 @@
     grid-template-rows: repeat(3,minmax(2rem,min-content));
     background-color: var(--color-primary);
     margin-top: 3rem;
-
+    z-index: 200;
 
     @media only screen and (max-width:$bp-large){
         margin-top: 0;

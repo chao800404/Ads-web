@@ -24,12 +24,12 @@
 
     @media only screen and (max-width:$bp-large){
         grid-template-columns: minmax(1rem,6rem) repeat(2 , minmax(min-content, 2.5fr)) minmax(1rem,6rem);
-        grid-template-rows: 3rem min-content 1fr min-content 10rem;
-
-        // justify-items: center;
+        grid-template-rows: 10rem min-content 1fr min-content 10rem;
     }
 
-    
+    @media only screen and (max-width:$bp-smallest){
+        grid-template-rows: 5rem min-content 1fr min-content 10rem;
+    }
     
 
 
@@ -186,10 +186,19 @@
         position: relative;
         align-self: center;
         z-index: 10;
-        grid-row: 2 / span 2;
+        grid-row: 1 / span 3;
 
         @media only screen and (max-width:$bp-larger){
             width: 100%;
+            margin-bottom: 10rem;
+        }
+
+        @media only screen and (max-width:$bp-large){
+            grid-row: 2 / span 1;
+        }
+
+        @media only screen and (max-width:$bp-medium){
+            margin-bottom: 5rem;
         }
         
 
@@ -224,6 +233,7 @@
 
         @media only screen and (max-width:$bp-larger){
             transform: translate(10%,-5%);
+            align-self: start;
         
         }
 
@@ -232,7 +242,7 @@
             grid-row: 4 / span 1;
             justify-self: end;
             transform: translate(0);
-            width: 100%;
+            width: 70%;
             height: 100%;
         }
 
@@ -253,6 +263,8 @@
 
         @media only screen and (max-width:$bp-larger){
             transform: translateX(-10%);
+            grid-row: 2 / span 1;
+            align-self: end;
         }
 
         @media only screen and (max-width:$bp-large){
@@ -275,15 +287,33 @@
 ///////webAdsDemo
 
 .webAdsDemo {
-    background-color: var(--color-quarternary);
     
+
     &_container {
         align-self: end;
+
+
+        @media only screen and (max-width:$bp-mediumest){
+            grid-column: 1 / -1;
+        }
     }
 
     &-img {
         width: 55vw;
         align-self: start;
+
+        @media only screen and (max-width:$bp-larger){
+            width: 80vw;
+        }
+        @media only screen and (max-width:$bp-larger){
+            width: 90vw;
+        }
+
+        @media only screen and (max-width:$bp-small){
+            width: 100vw;
+        }
+
+        
     }
 
     &-title {
@@ -291,6 +321,14 @@
         grid-row: 3 / span 1;
         justify-self: center;
         font-size: 7rem;
+
+        @media only screen and (max-width:$bp-larger){
+            padding: 5rem 0;
+        }
+
+        @media only screen and (max-width:$bp-small){
+            font-size: 4rem;
+        }
 
         span {
             text-align: center;
@@ -305,17 +343,40 @@
 }
 
 .webCreativeDemo {
-    background-image: linear-gradient(var(--color-quinary),var(--color-quinary-light));
+    @media only screen and (max-width:$bp-large){
+        grid-template-rows: 20rem minmax(min-content, 1fr);
+    }
+    
+    @media only screen and (max-width:$bp-smallest){
+        grid-template-rows: 5rem minmax(min-content, 1fr);
+    }
     &_container {
         width: 100%;
-        grid-column: 3/span 3;
-        grid-row: 2 / span 1;
+        grid-column: 2/span 4;
+        grid-row: 1/ -1;
         align-self: start;
+
+
+
+        @media only screen and (max-width:$bp-largest){
+            grid-row: 2/ span 1;
+        }
+
+        @media only screen and (max-width:$bp-large){
+            grid-column: 1/ -1;
+        }
     }
+
+        
+    
     &-title{
         grid-column: 1 / -1;
-        grid-row: 2 / span 1;
+        grid-row: 3 / span 1;
         align-self: end;
         justify-self: center;
+
+        @media only screen and (max-width:$bp-small){
+            font-size: 6.2vw;
+        }
     }
 }

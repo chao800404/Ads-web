@@ -15,6 +15,7 @@ import {
   HOMEDEMO_SVG_AN,
   WEBDESIGNDEMO_SVG_AN,
   WEBDESIGN_SVG_AN_CONTENTS,
+  CREATIVE_SVG_AN,
 } from "./congfig";
 
 ///////////////////////////////////////////////////////////
@@ -30,21 +31,26 @@ import webFeatureView from "./view/Webdesign/webFeatureView";
 //////////////////////////////////////////////////////////////////
 
 import webCreativeView from "./view/webCreative/webCreativeView";
+import webAdsFeatureView from "./view/webAds/webAdsFeatureView";
 
 //////////////////////////////////////////////////////////////////
 
 import webAdsDemoView from "./view/webAds/webAdsDemoView";
 import webCreativeFeatureView from "./view/webCreative/webCreativeFeatureView";
+import AdsFeatureView from "./view/webAds/webAdsFeatureView";
+//////////////////////////////////////////////////////////////
+import popupView from "./view/popupView";
+import scrollView from "./view/scrollView";
 
 const controPageResult = async function () {
   const hash = window.location.hash.slice(1);
   const load = hash === "" ? undefined : hash;
   await model.CreateStateobject(load);
-  resultPageVeiw.windowsrolltoTop();
   if (hash === ANCHOR[0] || hash === "") controHomePage();
   if (hash === ANCHOR[1]) controlWebDesignPage();
   if (hash === ANCHOR[2]) controlWebCreative();
   if (hash === ANCHOR[3]) controlWebAdsPage();
+  resultPageVeiw.windowsrolltoTop();
 };
 const controHomePage = async function () {
   await model.lottieFileAJAX(HOMEDEMO_SVG_AN);
@@ -61,32 +67,56 @@ const controHomePage = async function () {
 
   homeconsultation.render(model.state.consultation);
   homeconsultation.addSwiper();
+  popupView.windowRemovePopup();
 };
 
 const controlWebDesignPage = async function () {
+  homeconsultation.clear();
+  homeourteam.clear();
   await model.lottieFileAJAX(WEBDESIGNDEMO_SVG_AN);
   await model.lottieFileAJAX(WEBDESIGN_SVG_AN_CONTENTS);
   webDemoView.renderPageBg(PAGE_BG[1]);
   webDemoView.render(model.state.demo);
   webFeatureView.render(model.state.feature);
   webFeatureView.addHandlerList(webFeatureView.changeListImg);
-  homeourteam.clear();
   homeourteam.removeObserver(homeourteam.createObserver("0px", 0.25));
-  homeconsultation.clear();
+  popupView.windowRemovePopup();
 };
 
-const controlWebCreative = function () {
+const controlWebCreative = async function () {
+  homeconsultation.clear();
+  homeourteam.clear();
+  await model.lottieFileAJAX(CREATIVE_SVG_AN);
+  webCreativeView.renderPageBg(PAGE_BG[2]);
   webCreativeView.render(model.state.demo);
-  webCreativeFeatureView.render();
+  webCreativeFeatureView.render(model.state.feature);
+  popupView.windowRemovePopup();
 };
 
 const controlWebAdsPage = function () {
+  homeconsultation.clear();
+  homeourteam.clear();
+  popupView.windowAddPopup();
+  webAdsDemoView.renderPageBg(PAGE_BG[3]);
+  popupView.windowAddPopup();
   webAdsDemoView.render(model.state.demo);
+  AdsFeatureView.render(model.state.feature);
+};
+
+const controlScroll = function (scrollBtn) {
+  scrollView.scrollMotion(scrollBtn);
+};
+
+const controlScrollBarClickMove = function (e) {
+  scrollView.scrollBarClick(e);
 };
 
 const init = function () {
-  // controHomePage(model.state);
+  popupView.addHandlerPopup(popupView.windowRemovePopup);
   resultPageVeiw.addHandlerPage(controPageResult);
+  scrollView.addHandlerScroll(controlScroll);
+  scrollView.scrollBtnMove();
+  scrollView.addHandlerScrollbarClick(controlScrollBarClickMove);
 };
 
 init();

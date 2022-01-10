@@ -24,37 +24,51 @@
     display: flex;
     justify-content: center;
     position: relative;
-    z-index: 1;
+    z-index:1;
 
-   &::after{
-        position: absolute;
-        content: '';
-        width: 1rem;
-        height: 100%;
-        top:0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 1rem;
-        background-image: linear-gradient(to bottom ,var(--color-secondary)2%,var(--color-grey-dark-3)2%);
-        z-index: -1;
-        border:1px solid var(--color-grey-dark-3);
-    }
 
     &__btn {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
         border: none;
-        position: relative;
-        overflow: hidden;
+        position:absolute;
+        top: -1.25rem;
         background-color: rgba(#111,.9);
         border: 2px solid rgba(#fff , .2);
-        box-shadow: 0rem 0rem 2rem rgba($color: #F15A24, $alpha: .5);
-        
+        position: relative;
+        z-index: 50;
     }
 
     &__btn:hover {
         box-shadow: inset .2rem .2rem .5rem rgba($color: #F15A24, $alpha: .5),
                     inset -.2rem -.2rem .5rem rgba($color: #F15A24, $alpha: .5);            
+    }
+
+    &__bg {
+        position: absolute;
+        top:0;
+        left: 50%;
+        height: 100%;
+        width: 1rem;
+        background-image: linear-gradient(to bottom , rgba(#BC3C0E,.9), rgba(#FF7443,.9));
+        z-index: 10;
+        transform-origin: top;
+        transform: translateX(-50%) scaleY(0);
+        border-radius: 1rem;
+        pointer-events: none;
+    }
+
+    &__bg-outside {
+        position: absolute;
+        width: 1rem;
+        height: 100%;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 1rem;
+        background-color: rgba(#111,.3);
+        z-index: -1;
+        border:1px solid rgba(#fff,.3);
     }
 }

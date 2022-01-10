@@ -33,7 +33,7 @@
 
     @media only screen and (max-width:$bp-small){
         grid-template-columns: minmax(2rem,1fr) minmax(30rem,7fr) minmax(2rem,1fr);
-        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 3.5fr 1fr;
     }
     
 

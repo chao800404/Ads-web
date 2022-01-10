@@ -34,7 +34,7 @@
 
     @media only screen and (max-width:$bp-small){
         grid-template-columns:  2rem  minmax(min-content,1fr) 2rem;
-        grid-template-rows:  minmax(2rem , 6rem) repeat(10,min-content)  minmax(2rem , 6rem);
+        grid-template-rows:  minmax(2rem , 6rem) repeat(12,min-content)  minmax(2rem , 6rem);
     }
 
 
@@ -603,7 +603,6 @@
     grid-column: 2 / span 2;
     grid-row: 7 / span 1;
     // background-color: var(--color-grey-light-1);
-    height: 30rem;
     border-radius: .5rem;
     position: relative;
     z-index: 20;
@@ -682,7 +681,7 @@
 
     @media only screen and (max-width:$bp-small){
         grid-column: 2 / span 1;
-        grid-row: 15 / span 1;
+        grid-row: 13 / span 1;
         max-width: calc(100vw - 6rem);
     }
 }

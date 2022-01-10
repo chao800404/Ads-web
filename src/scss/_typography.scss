@@ -27,6 +27,8 @@
     color: transparent;
     background: linear-gradient($deg, $preColor 50% ,$afterColor 50%);
     background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
     font-size: $fontS;
 }
 
@@ -69,7 +71,7 @@
     }
 
     @media only screen and (max-width:$bp-small){
-        font-size: 7rem;
+        font-size: 14.5vw;
     }
 }
 
@@ -218,12 +220,9 @@
     font-size: 2rem;
     border-radius: .5rem;
     background-color: var(--color-grey-light-1);
-    padding: 1rem 3rem;
     cursor: pointer;
+    display: flex;
 
-    @media only screen and (max-width:$bp-small){
-        font-size: 1.5rem;
-    }
 }
 
 .btn-2 {

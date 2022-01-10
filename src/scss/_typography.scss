@@ -25,10 +25,11 @@
     text-transform: uppercase;
     font-family: $font-display;
     color: transparent;
-    background-image: linear-gradient($deg, $preColor 50% ,$afterColor 50%);
+    background: linear-gradient($deg, $preColor 50% ,$afterColor 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: $fontS;
 }
 

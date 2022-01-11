@@ -6,6 +6,8 @@ class RobotView {
   _currentPage;
   _lastSecPage;
   _timer = null;
+  _message = document.querySelector(".message__container");
+  _title = document.querySelector(".message__title");
 
   addHandlerRobot(handler) {
     this._parentElement.addEventListener("click", (e) => {
@@ -16,10 +18,8 @@ class RobotView {
   }
 
   appearRobot() {
-    const message = this._parentElement.querySelector(".message__container");
-    const title = this._parentElement.querySelector(".message__title");
-    message.classList.toggle("message--active");
-    title.classList.toggle("message__title--active");
+    this._message.classList.toggle("message--active");
+    this._title.classList.toggle("message__title--active");
   }
 
   addHandlerCloseRobot(handler) {
@@ -40,6 +40,8 @@ class RobotView {
       this._obseverTimeout();
     }, 1000);
     this._currentPage = this._body.getBoundingClientRect().bottom;
+    this._message.classList.remove("message--active");
+    this._title.classList.remove("message__title--active");
   }
 
   _obseverTimeout() {

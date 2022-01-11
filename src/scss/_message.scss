@@ -26,8 +26,9 @@
         font-family: $font-display;
         position: absolute;
         left: 8rem;
-        top: -6.5rem;
+        top: -5rem;
         transform: translateX(200%);
+        letter-spacing: .5rem;
         transition:all .5s ease;
         transition-delay: .8s;
     }
@@ -112,5 +113,5 @@
 }
 
 .message--active--2 {
-    transform: translateX(50%);
+    transform: translateX(100%);
 }

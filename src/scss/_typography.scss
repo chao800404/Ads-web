@@ -205,12 +205,13 @@
     }
 
     &:hover::before {
-        transform: translate(-50%, -100%) scale(5, 1.5);
+        transform: translate(-50%, -100%) scale(3.5, 1.5);
         border-radius: 30px;
         box-shadow: none;
         filter: blur( 1rem);
-        @supports(backdrop-filter: blur()){
-            filter: none;
+
+        @media only screen and(max-width:$bp-largest){
+            transform: translate(-50%, -100%) scale(3, 1.5);
         }
     }
 }

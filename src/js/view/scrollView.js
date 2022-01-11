@@ -58,16 +58,13 @@ class Scroll {
   }
 
   scrollBtnMove() {
-    window.addEventListener("scroll", (e) => {
-      const currentScrollLoction = window.pageYOffset;
-      const averageHeight =
-        currentScrollLoction /
-        (this._fullWindow.getBoundingClientRect().height - window.innerHeight);
-      const currentScrollBtnLocation = averageHeight * this._scrollbarHeight;
-
-      this._scrollBtnTransform(currentScrollBtnLocation);
-      this._scrollbarShadow(currentScrollBtnLocation);
-    });
+    const currentScrollLoction = window.pageYOffset;
+    const averageHeight =
+      currentScrollLoction /
+      (this._fullWindow.getBoundingClientRect().height - window.innerHeight);
+    const currentScrollBtnLocation = averageHeight * this._scrollbarHeight;
+    this._scrollBtnTransform(currentScrollBtnLocation);
+    this._scrollbarShadow(currentScrollBtnLocation);
   }
 
   _scrollBtnTransform(btnMove) {

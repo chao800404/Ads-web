@@ -41,6 +41,8 @@ import AdsFeatureView from "./view/webAds/webAdsFeatureView";
 //////////////////////////////////////////////////////////////
 import popupView from "./view/popupView";
 import scrollView from "./view/scrollView";
+import robotView from "./view/robotView";
+import windowView from "./view/windowView";
 
 const controPageResult = async function () {
   const hash = window.location.hash.slice(1);
@@ -111,12 +113,23 @@ const controlScrollBarClickMove = function (e) {
   scrollView.scrollBarClick(e);
 };
 
+const controlRobot = function () {
+  robotView.appearRobot();
+};
+const controlWindowScroll = function (e) {
+  scrollView.scrollBtnMove();
+  robotView.moveRobot();
+  robotView.prevmoveRobot();
+};
+
 const init = function () {
   popupView.addHandlerPopup(popupView.windowRemovePopup);
   resultPageVeiw.addHandlerPage(controPageResult);
   scrollView.addHandlerScroll(controlScroll);
-  scrollView.scrollBtnMove();
+  windowView.addHandlerWindowSroll(controlWindowScroll);
   scrollView.addHandlerScrollbarClick(controlScrollBarClickMove);
+  robotView.addHandlerRobot(controlRobot);
+  robotView.addHandlerCloseRobot(controlRobot);
 };
 
 init();

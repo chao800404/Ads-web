@@ -56,8 +56,14 @@ const controPageResult = async function () {
   if (hash === ANCHOR[1]) controlWebDesignPage();
   if (hash === ANCHOR[2]) controlWebCreative();
   if (hash === ANCHOR[3]) controlWebAdsPage();
-  // resultPageVeiw.windowsrolltoTop();
+  resultPageVeiw.windowsrolltoTop("auto");
 };
+
+const controlReload = function () {
+  window.location.hash = "";
+  console.log(true);
+};
+
 const controHomePage = async function () {
   await model.lottieFileAJAX(HOMEDEMO_SVG_AN);
   loadView.generateMarkupLoad();
@@ -147,6 +153,7 @@ const init = function () {
   windowView.addHandlerWindowLoad(controlLoadAn);
   popupView.addHandlerPopup(popupView.windowRemovePopup);
   resultPageVeiw.addHandlerPage(controPageResult);
+  windowView.addHandlerWindowLoad(controlReload);
   scrollView.addHandlerScroll(controlScroll);
   windowView.addHandlerWindowSroll(controlLoadAnFinish);
   windowView.addHandlerWindowSroll(controlWindowScroll);

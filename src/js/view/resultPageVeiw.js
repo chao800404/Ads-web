@@ -17,6 +17,10 @@ class ResultPageView extends View {
       .querySelector("body")
       .scrollIntoView({ behavior: smooth, block: "start" });
   }
+
+  // addHandlerWindowReload(handler) {
+  //   window.addEventListener("beforeunload", handler);
+  // }
 }
 
 export default new ResultPageView();

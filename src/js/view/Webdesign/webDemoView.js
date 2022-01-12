@@ -1,7 +1,6 @@
 /** @format */
 
 import View from "../veiw";
-const radar1 = require("../../../img/webdesign/demo/radars1.svg");
 const demoBg = require("../../../img/webdesign/demo/Vector.svg");
 
 class WebDemo extends View {
@@ -18,7 +17,7 @@ class WebDemo extends View {
         </div>
         </div>
         <div class="webDesign_radar-img radar-img_an">
-            ${radar1}
+          <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ofocdzqf.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
         </div>
         <h1 class="heading-1--1 webDesign_title">
             <span>${this._organizeText(title, 0, 1)}</span>

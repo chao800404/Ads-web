@@ -212,8 +212,8 @@
             grid-row: 2 / span 1;
         }
 
-        @media only screen and (max-width:$bp-medium){
-            margin-bottom: 5rem;
+        @media only screen and (max-width:$bp-small){
+            grid-column: 1 / -1;
         }
         
 

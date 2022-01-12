@@ -38,7 +38,7 @@
     }
 
     @media only screen and (max-width:$bp-small){
-        min-height: 26rem;
+        grid-row-gap: .2rem;
     }
     
     
@@ -167,10 +167,11 @@
         }
 
         @media only screen and (max-width:$bp-smallest){
-            padding: 0rem 5rem 0 5rem;
+            padding: 0rem 5rem;
         }
 
         @media only screen and (max-width:$bp-small){
+            padding: 0rem 2rem;
             font-size: 1.5rem;
         }
         

@@ -178,7 +178,8 @@
             z-index: 1;
 
             @media only screen and (max-width:$bp-small){
-                width: calc((100vw - 2rem) / 3.333333333);
+                width: calc((100vw - 8rem) / 3);
+                font-size: 1.3rem;
             }
 
             &:after {

@@ -1,0 +1,14 @@
+.spinner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 3000;
+    background-color: var(--color-grey-light-2);
+
+    &__an {
+        width: 100%;
+    }
+}

@@ -1,6 +1,7 @@
 /** @format */
 
 import View from "../veiw";
+import { Canvas } from "../../helpers";
 const demoBg = require("../../../img/webdesign/demo/Vector.svg");
 
 class WebDemo extends View {
@@ -12,9 +13,6 @@ class WebDemo extends View {
        <div class="template_demo webDesign">
         <div class="template_demo-container webDesign_image webDesignDemo_an">
         <lottie-player class="webDesign-svg" src="${svgUrl}"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
-        <div class="template_demo-bg">
-        ${demoBg}
-        </div>
         </div>
         <div class="webDesign_radar-img radar-img_an">
           <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ofocdzqf.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>

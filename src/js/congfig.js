@@ -10,7 +10,7 @@ export const API_KEY = "AIzaSyDAMnZbUNX90M2k8o5idwT0xCuvds80Moo";
 export const HOMEDEMO_SVG_AN =
   "https://assets4.lottiefiles.com/packages/lf20_5hbjndll/ADSSVGAN/data.json";
 export const WEBDESIGNDEMO_SVG_AN =
-  "https://assets9.lottiefiles.com/packages/lf20_urmc2bdc/WEBDEMOAN/data.json";
+  "https://assets4.lottiefiles.com/packages/lf20_isawcxyt.json";
 
 export const CREATIVE_SVG_AN =
   "https://assets3.lottiefiles.com/packages/lf20_9ciruyqz.json";

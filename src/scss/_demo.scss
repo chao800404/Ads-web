@@ -27,9 +27,9 @@
         grid-template-rows: 10rem min-content 1fr min-content 10rem;
     }
 
-    @media only screen and (max-width:$bp-smallest){
-        grid-template-rows: 5rem min-content 1fr min-content 10rem;
-    }
+    // @media only screen and (max-width:$bp-smallest){
+    //     grid-template-rows: 5rem min-content 1fr min-content 10rem;
+    // }
     
 
 
@@ -368,7 +368,7 @@
     }
     
     @media only screen and (max-width:$bp-smallest){
-        grid-template-rows: 5rem minmax(min-content, 1fr);
+        grid-template-rows: 10rem minmax(min-content, 1fr);
     }
     &_container {
         width: 100%;

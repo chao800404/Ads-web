@@ -11,10 +11,11 @@ class ResultPageView extends View {
     );
   }
 
-  windowsrolltoTop() {
+  windowsrolltoTop(smooth = "smooth") {
+    if (smooth !== "smooth") smooth = "auto";
     document
       .querySelector("body")
-      .scrollIntoView({ behavior: "smooth", block: "start" });
+      .scrollIntoView({ behavior: smooth, block: "start" });
   }
 }
 

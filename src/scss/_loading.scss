@@ -1,0 +1,36 @@
+.loading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: var(--color-primary);
+    top: 0;
+    z-index: 5000;
+    transform-origin: left;
+    transition: all .5s cubic-bezier(.76,-0.84,.42,1.35);
+
+    &__an {
+        width: 90%;
+    }
+
+    &__mouse__an{
+        position: absolute;
+        width: 8rem;
+        top:12rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s ease-in;
+        transition-delay: 1s;
+    }
+
+    &__mouse__an--active {
+        transform: translate(-50%,100%);
+        visibility: visible;
+        opacity: 1;
+    }
+}

@@ -1,14 +1,14 @@
 /** @format */
 
-const astronaut = require("../../../img/form__icons/astronaut.svg");
 const userIcon = require("../../../img/form__icons/user__icon.svg");
 const emailIcon = require("../../../img/form__icons/email__icon.svg");
 const phoneIcon = require("../../../img/form__icons/phone__icon.svg");
+import { ASTRONAUT } from "../../congfig";
 
 export const form = `
         <form action="#" class="process__form">
             <div class="process__form__img astronaut-animate">
-            ${astronaut}
+            <lottie-player class="header__hanburger_content" src="${ASTRONAUT}"  background="transparent"  loop autoplay  speed="1" ></lottie-player>
             </div>
             <h3 class="heading-3 process__form__contact">Contact us</h3>
             <div class="process__form-name process__form__input">  

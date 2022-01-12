@@ -15,6 +15,9 @@ export const WEBDESIGNDEMO_SVG_AN =
 export const CREATIVE_SVG_AN =
   "https://assets3.lottiefiles.com/packages/lf20_9ciruyqz.json";
 
+export const ASTRONAUT =
+  "https://assets10.lottiefiles.com/packages/lf20_eyjzjrrz.json";
+
 export const WEBDESIGN_SVG_AN_CONTENTS = [
   "https://assets7.lottiefiles.com/packages/lf20_24qofkuz.json",
   "https://assets7.lottiefiles.com/packages/lf20_5zh17nif.json",

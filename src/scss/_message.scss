@@ -17,6 +17,11 @@
         transform-origin: right bottom;
         transform: scale(0);
         transition: all .3s cubic-bezier(.74,-0.48,.25,1.43);
+
+        @media only screen and(max-width:$bp-small){
+            left: -27rem;
+            top: -8rem;
+        }
     }
 
     &__title {
@@ -44,6 +49,7 @@
         position: absolute;
         left: -2.25rem;
         top: -2.25rem;
+        cursor: pointer;
     }
 
     &__robot {
@@ -55,11 +61,22 @@
         box-shadow: 0 .5rem .5rem rgba(#111,.3);
         backdrop-filter: blur(10px);
         overflow: hidden;
+        cursor: pointer;
+
+        @media only screen and(max-width:$bp-small){
+            width: 6rem;
+            height: 6rem;
+        }
 
         &-img {
             height: 13rem;
             width: 14rem;
             transform: translatex(-21%);
+
+            @media only screen and(max-width:$bp-small){
+                height: 11rem;
+                width: 10rem;
+            }
         }
     }
 

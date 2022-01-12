@@ -4,16 +4,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     border-bottom: 1px solid var(--color-primary-light);
     background-color: var(--color-primary);
     z-index: 3000;
 
-    @media only screen and (max-width:$bp-smallest){
-        display: none;
-    }
+    
 }
 
 .header__logo {
@@ -116,33 +113,19 @@
 
 .header__hanburger{
     height: 100%;
-    width: 12rem;
+    width: 8rem;
     border-left: 1px solid var(--color-primary-light);
-    padding: 1rem;
     position: relative;
     overflow: hidden;
     margin-left: auto;
+    cursor: pointer;
+    transition: transform .2s;
 
-    &__line {
-        width: 60%;
-        height: 2px;
-        background-color: var(--color-secondary);
-        display: block;
-        transition: all .2s;
-        position: absolute;
-        top: 50%;
-        left: 20%;
-        backface-visibility:visible;
 
-        &-1{
-            transform: translateY(1.2rem);
-        }
-
-        &-3{
-            transform: translateY(-1.2rem);
-        }
+    &_content {
+        position: relative;
+        z-index: 400;
     }
-
 
     &::after {
         content: '';
@@ -156,24 +139,31 @@
         transition: all .2s ease;
     }
 
-    &:hover &__line,
-    &:active &__line {
-        &-1{
-            transform: translateY(1rem) scaleX(.8);
-        }
-
-        &-3{
-            transform: translateY(-1rem) scale(.8);
-        }
-    }
 
     &:hover::after {
         clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0% 100% );
     }
+
+    &:active {
+        transform: scale(.95);
+    }
 }
+
+
+
 
 .header__menu {
     height: 100%;
+    display: flex;
+    position: absolute;
+    right: 0;
+    background-color: inherit;
+    transform: translateX(calc(100% - 8rem));
+    transition: transform .3s ease-in-out;
+
+
+    
+
     &__list {
         list-style: none;
         display: flex;
@@ -186,6 +176,10 @@
             position: relative;
             transition: all .3s;
             z-index: 1;
+
+            @media only screen and (max-width:$bp-small){
+                width: calc((100vw - 2rem) / 3.333333333);
+            }
 
             &:after {
                 content: '';
@@ -230,3 +224,6 @@
 }
 
 
+.header__menu--active {
+    transform: translateX(0);
+}

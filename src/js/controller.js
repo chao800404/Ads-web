@@ -39,10 +39,12 @@ import webAdsDemoView from "./view/webAds/webAdsDemoView";
 import webCreativeFeatureView from "./view/webCreative/webCreativeFeatureView";
 import AdsFeatureView from "./view/webAds/webAdsFeatureView";
 //////////////////////////////////////////////////////////////
+import headerView from "./view/headerView";
 import popupView from "./view/popupView";
 import scrollView from "./view/scrollView";
 import robotView from "./view/robotView";
 import windowView from "./view/windowView";
+import loadView from "./view/loadView";
 
 const controPageResult = async function () {
   const hash = window.location.hash.slice(1);
@@ -56,6 +58,7 @@ const controPageResult = async function () {
 };
 const controHomePage = async function () {
   await model.lottieFileAJAX(HOMEDEMO_SVG_AN);
+  loadView.generateMarkupLoad();
   homedemo.renderPageBg(PAGE_BG[0]);
   homedemo.render(model.state.demo);
   homedemo.addHandlerStart(homedemo.addScrollView);
@@ -122,14 +125,30 @@ const controlWindowScroll = function (e) {
   robotView.prevmoveRobot();
 };
 
+const controlHeaderMenu = function () {
+  headerView.appearMenuContent();
+  headerView.generateMarkupCloseBtn();
+};
+
+const controlLoadAn = function () {
+  loadView.generateMarkupMouseAn();
+};
+
+const controlLoadAnFinish = function () {
+  loadView.scollMoveToHeaderlogo(resultPageVeiw.windowsrolltoTop);
+};
+
 const init = function () {
+  windowView.addHandlerWindowLoad(controlLoadAn);
   popupView.addHandlerPopup(popupView.windowRemovePopup);
   resultPageVeiw.addHandlerPage(controPageResult);
   scrollView.addHandlerScroll(controlScroll);
+  windowView.addHandlerWindowSroll(controlLoadAnFinish);
   windowView.addHandlerWindowSroll(controlWindowScroll);
   scrollView.addHandlerScrollbarClick(controlScrollBarClickMove);
   robotView.addHandlerRobot(controlRobot);
   robotView.addHandlerCloseRobot(controlRobot);
+  headerView.addHandlerHamburgerBtn(controlHeaderMenu);
 };
 
 init();

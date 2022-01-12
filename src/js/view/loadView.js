@@ -3,6 +3,8 @@
 class LoadView {
   _parentElement = document.querySelector(".loading");
   _isFinshAn = false;
+  _mouseAn = document.querySelector(".loading__mouse__an");
+  _anEnd = false;
 
   generateMarkupLoad() {
     const canvas = this._parentElement.querySelector(".loading__an");
@@ -22,28 +24,31 @@ class LoadView {
   }
 
   generateMarkupMouseAn() {
-    const mouseAn = this._parentElement.querySelector(".loading__mouse__an");
     setTimeout(() => {
-      mouseAn.classList.add("loading__mouse__an--active");
+      this._mouseAn.classList.add("loading__mouse__an--active");
     }, 2000);
   }
 
-  scollMoveToHeaderlogo(scrolltoTop, isFinish) {
+  scollMoveToHeaderlogo(scrolltoTop) {
     const body = document.querySelector("body");
     const bodyBounding = body.getBoundingClientRect().y;
     const abs = Math.abs(bodyBounding);
-    if (!this._isFinshAn) {
-      if (abs > 2) {
-        this._parentElement.style =
-          "transform:scaleX(0);opacity:0; visibility:hidden";
+
+    if (abs > 2 && !this._isFinshAn && this._anEnd) {
+      this._parentElement.style =
+        "transform:scaleX(0);opacity:0; visibility:hidden";
+      this._isFinshAn = true;
+      this._parentElement.addEventListener("transitionend", () => {
+        this._parentElement.style = "display:none";
+      });
+      setTimeout(() => {
         scrolltoTop("auto");
-        this._isFinshAn = true;
-        this._parentElement.addEventListener(
-          "transitionend",
-          () => (this._parentElement.style = "display:none")
-        );
-      }
+      }, 200);
     }
+  }
+
+  mouseAnFinish() {
+    this._mouseAn.addEventListener("transitionend", () => (this._anEnd = true));
   }
 }
 

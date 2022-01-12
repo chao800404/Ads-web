@@ -149,6 +149,7 @@ const init = function () {
   robotView.addHandlerRobot(controlRobot);
   robotView.addHandlerCloseRobot(controlRobot);
   headerView.addHandlerHamburgerBtn(controlHeaderMenu);
+  loadView.mouseAnFinish();
 };
 
 init();

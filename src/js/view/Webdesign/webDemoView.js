@@ -10,7 +10,7 @@ class WebDemo extends View {
     return `
       <div class="template_demo webDesign">
         <div class="template_demo-container webDesign_image webDesignDemo_an">
-          
+          <lottie-player class="webDesign-svg" src="https://assets7.lottiefiles.com/packages/lf20_isawcxyt.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
         </div>
         
         <div class="webDesign_radar-img radar-img_an">

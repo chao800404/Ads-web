@@ -54,6 +54,7 @@ const controPageResult = async function () {
   await model.CreateStateobject(load);
   if (hash === ANCHOR[0] || hash === "") controHomePage();
   if (hash === ANCHOR[1]) controlWebDesignPage();
+
   if (hash === ANCHOR[2]) controlWebCreative();
   if (hash === ANCHOR[3]) controlWebAdsPage();
   resultPageVeiw.windowsrolltoTop("auto");
@@ -61,7 +62,6 @@ const controPageResult = async function () {
 
 const controlReload = function () {
   window.location.hash = "";
-  console.log(true);
 };
 
 const controHomePage = async function () {
@@ -72,10 +72,10 @@ const controHomePage = async function () {
   homedemo.addHandlerStart(homedemo.addScrollView);
   homefeature.render(model.state.feature);
   homefeature.addHandlerOptions(homefeature.changeOptionContent);
-  homefeature.addObserver(homefeature.createObserver("0px", 0.25));
+  homefeature.createObserver("0px", 0.25);
   homeourteam.render(model.state.ourteam);
   homeourteam.addSwiper();
-  homeourteam.addObserver(homeourteam.createObserver("0px", 0.25));
+  homeourteam.createObserver("0px", 0.25);
   homeconsultation.render(model.state.consultation);
   homeconsultation.addSwiper();
   popupView.windowRemovePopup();
@@ -87,12 +87,11 @@ const controlWebDesignPage = async function () {
   homeourteam.clear();
   await model.lottieFileAJAX(WEBDESIGNDEMO_SVG_AN);
   await model.lottieFileAJAX(WEBDESIGN_SVG_AN_CONTENTS);
-  homefeature.removeObserver(homefeature.createObserver("0px", 0.25));
+
   webDemoView.renderPageBg(PAGE_BG[1]);
   webDemoView.render(model.state.demo);
   webFeatureView.render(model.state.feature);
   webFeatureView.addHandlerList(webFeatureView.changeListImg);
-  homeourteam.removeObserver(homeourteam.createObserver("0px", 0.25));
   popupView.windowRemovePopup();
   spinnerView.removeMarkupSpinner();
 };

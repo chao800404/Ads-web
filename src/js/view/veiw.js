@@ -24,7 +24,7 @@ export default class View {
     return newText;
   }
 
-  createObserver(rootMargin, threshold) {
+  createObserver(rootMargin = "0px", threshold = 0.25, unobserve = false) {
     const options = {
       root: null,
       rootMargin,
@@ -34,15 +34,9 @@ export default class View {
       this._observerHandler.bind(this),
       options
     );
-    return observer;
-  }
-
-  addObserver(observer) {
-    observer.observe(this._parentElement);
-  }
-
-  removeObserver(observer) {
-    observer.unobserve(this._parentElement);
+    unobserve
+      ? observer.unobserve(this._parentElement)
+      : observer.observe(this._parentElement);
   }
 
   renderPageBg(background) {

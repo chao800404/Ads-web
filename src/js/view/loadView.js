@@ -15,19 +15,6 @@ class LoadView {
       "https://assets2.lottiefiles.com/packages/lf20_5tsw9x6j.json",
       false
     ).draw();
-    // const ctx = canvas.getContext("2d");
-    // ctx.canvas.width = window.innerWidth;
-    // ctx.canvas.height = window.innerHeight;
-
-    // lottie.loadAnimation({
-    //   renderer: "canvas",
-    //   autoplay: true,
-    //   loop: false,
-    //   path: "https://assets2.lottiefiles.com/packages/lf20_5tsw9x6j.json",
-    //   rendererSettings: {
-    //     context: ctx,
-    //   },
-    // });
   }
 
   generateMarkupMouseAn() {

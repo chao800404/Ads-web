@@ -47,7 +47,7 @@ import windowView from "./view/windowView";
 import loadView from "./view/loadView";
 import spinnerView from "./view/spinnerView";
 import formView from "./view/Home/fomView";
-import promptView from "./promptView";
+import promptView from "./view/promptView";
 
 const controPageResult = async function () {
   const hash = window.location.hash.slice(1);

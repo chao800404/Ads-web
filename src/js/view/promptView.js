@@ -4,7 +4,10 @@ class PromptView {
   _parentElement = document.querySelector(".prompt");
 
   togglePrompt() {
-    this._parentElement.classList.toggle("prompt--active");
+    setTimeout(
+      () => this._parentElement.classList.toggle("prompt--active"),
+      200
+    );
   }
 
   closePrompt() {

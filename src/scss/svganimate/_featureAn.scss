@@ -40,6 +40,11 @@
     opacity: 1;
     visibility: visible;
 
+    @media only screen and(max-width:$bp-smallest){
+        opacity: 0;
+        visibility: hidden;
+    }
+
     .feature__server__img-bg{
         transform:translateX(0rem);
         opacity:1;

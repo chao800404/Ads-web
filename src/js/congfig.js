@@ -5,7 +5,7 @@ export const PAGE_BG = ["homeWebBg", "webDesignBg", "creativeBg", "adsBg"];
 export const CENTERSLIDE = true;
 export const SWIPERSPACEBETWEEN = 20;
 export const SLIDESPERVIEW = "auto";
-export const API_KEY = "AIzaSyDAMnZbUNX90M2k8o5idwT0xCuvds80Moo";
+export const API_KEY = "AIzaSyBY5yD-nFcK2DeuXBXxyGSJzo5hQ7Y0Lw8";
 
 export const HOMEDEMO_SVG_AN =
   "https://assets4.lottiefiles.com/packages/lf20_5hbjndll/ADSSVGAN/data.json";

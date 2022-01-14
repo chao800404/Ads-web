@@ -49,6 +49,38 @@
         z-index: 2;
     }
 
+
+    &__prompt {
+        clip-path: polygon(0 54%, 100% 53%, 100% 85%, 61% 86%, 50% 100%, 36% 86%, 0 86%);
+        background-color: rgba(#212936, .9);
+        width: 24rem;
+        height: 15rem;
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        outline: 2px solid var(--color-primary);
+        visibility: hidden;
+        opacity: 0;
+        transition: opactiy .2s;
+
+        p{
+            position: absolute;
+            font-size: 2rem;
+            bottom:3rem;
+            left: 5rem;
+            z-index: 300;
+            color: var(--color-grey-light-1);
+
+        }
+
+        &--active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+
     &__input {
         justify-self: center;
         display: flex;
@@ -89,6 +121,8 @@
                 transform: scale(1);
             }
         }
+
+        
 
     }
 

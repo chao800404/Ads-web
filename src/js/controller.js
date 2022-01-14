@@ -46,6 +46,8 @@ import robotView from "./view/robotView";
 import windowView from "./view/windowView";
 import loadView from "./view/loadView";
 import spinnerView from "./view/spinnerView";
+import formView from "./view/Home/fomView";
+import { format } from "prettier";
 
 const controPageResult = async function () {
   const hash = window.location.hash.slice(1);
@@ -72,14 +74,16 @@ const controHomePage = async function () {
   homedemo.addHandlerStart(homedemo.addScrollView);
   homefeature.render(model.state.feature);
   homefeature.addHandlerOptions(homefeature.changeOptionContent);
-  homefeature.createObserver("0px", 0.25);
   homeourteam.render(model.state.ourteam);
   homeourteam.addSwiper();
-  homeourteam.createObserver("0px", 0.25);
   homeconsultation.render(model.state.consultation);
   homeconsultation.addSwiper();
   popupView.windowRemovePopup();
   spinnerView.removeMarkupSpinner();
+  if (window.innerWidth > 780) {
+    homeourteam.createObserver("0px", 0.25);
+    homefeature.createObserver("0px", 0.25);
+  }
 };
 
 const controlWebDesignPage = async function () {
@@ -87,7 +91,6 @@ const controlWebDesignPage = async function () {
   homeourteam.clear();
   await model.lottieFileAJAX(WEBDESIGNDEMO_SVG_AN);
   await model.lottieFileAJAX(WEBDESIGN_SVG_AN_CONTENTS);
-
   webDemoView.renderPageBg(PAGE_BG[1]);
   webDemoView.render(model.state.demo);
   webFeatureView.render(model.state.feature);
@@ -148,6 +151,14 @@ const controlLoadAnFinish = function () {
   loadView.scollMoveToHeaderlogo(resultPageVeiw.windowsrolltoTop);
 };
 
+const controlForm = async function (data) {
+  await model.writeUserData(data);
+};
+
+const controlCreativeBtn = function (btn) {
+  homefeature.creativeAppears(btn);
+};
+
 const init = function () {
   windowView.addHandlerWindowLoad(controlLoadAn);
   popupView.addHandlerPopup(popupView.windowRemovePopup);
@@ -162,6 +173,13 @@ const init = function () {
   headerView.addHandlerHamburgerBtn(controlHeaderMenu);
   loadView.mouseAnFinish();
   spinnerView.generateMarkupSpinner();
+  formView.addHandlerFormSubmit(controlForm);
+
+  //////////////////////////
+  ///mobile
+  if (window.innerWidth < 780) {
+    homefeature.addHandlerCreatives(controlCreativeBtn);
+  }
 };
 
 init();

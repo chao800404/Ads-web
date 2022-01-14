@@ -18,6 +18,7 @@ const severImg3 = require("../../../img/Ads__type/type-3.svg");
 
 class HomeFeature extends View {
   _parentElement = document.querySelector(".features");
+  _featureSeaver;
 
   _generateMarkup() {
     return `
@@ -71,6 +72,10 @@ class HomeFeature extends View {
           )
           .join("")}
         <img class="feature__server__img-init" src="${googleAdsLogo}" alt="Ads Logo">
+
+        <div class="feature__server__img-close">
+          <lottie-player  src="https://assets5.lottiefiles.com/packages/lf20_JuwbIo.json"  background="transparent"  speed="1"  hover></lottie-player>
+        </div>
         </div>
     </div>
         `;
@@ -133,7 +138,7 @@ class HomeFeature extends View {
         (server, index) =>
           `<div class="feature__server__content feature__server__content-${
             index + 1
-          }">
+          }" data-option="${index + 1}">
         <div class="feature__server--type"> 
             ${imgs[index]}
           </div>
@@ -165,6 +170,32 @@ class HomeFeature extends View {
       title.style = "transform:translateX(0rem);opacity:1; visibility: visble;";
       webImgBg.classList.add("feature_animate-end");
     }
+  }
+
+  addHandlerCreatives(handler) {
+    this._parentElement.addEventListener("click", (e) => {
+      const btn = e.target.closest(".feature__server__content");
+      if (!btn) return;
+      handler(btn);
+      this._closeCreative();
+    });
+  }
+
+  creativeAppears(btn) {
+    const optionNumb = btn.dataset.option;
+    this._featureSeaver = document.querySelector(".feature__server__img");
+    const featurServerImg = document.querySelector(
+      `.feature__server__img-example-${optionNumb}`
+    );
+    this._featureSeaver.style = "visibility:visible; opacity:1";
+    featurServerImg.style = "z-index:200;transition:none";
+  }
+
+  _closeCreative() {
+    const closeBtn = document.querySelector(".feature__server__img-close");
+    closeBtn.addEventListener("click", () => {
+      this._featureSeaver.style = "visibility:hidden; opacity:0";
+    });
   }
 }
 

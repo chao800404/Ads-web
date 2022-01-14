@@ -244,6 +244,7 @@
     background-position: right;
     border-right: 3px solid rgba(#fff,.2); 
     border-top: 3px solid rgba(#fff,.2);
+    position: relative;
     
 
     display: grid;
@@ -252,7 +253,6 @@
 
     @media only screen and (max-width:$bp-large){
         border-radius: 0;
-        // grid-template-columns: minmax(2rem ,4rem) minmax(min-content,1fr) min-content minmax(2rem ,4rem);
         border: none;
     }
 
@@ -368,13 +368,17 @@
 
 
         @media only screen and (max-width:$bp-smallest){
-            // grid-column: 3 / span 1;
-            // grid-row: 3 / span 1;
-            // padding: 0;
-            // position: relative;
-            // align-self: start;
-            // top:0;
-            display: none;
+            position: fixed;
+            top:0;
+            left: 0;
+            background-color: rgba(#111A23,.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            width: 100vw;
+            height: 100vh;
+            z-index: 5000;
+            visibility: hidden;
+            opacity: 0;
         }
 
         
@@ -387,6 +391,20 @@
         svg {
             height: 100%;
         }
+
+        @media only screen and (max-width:$bp-smallest){
+            display: none;
+        }
+    }
+
+    &__img-close {
+        width: 5rem;
+        height: 5rem;
+        display: none;
+
+        @media only screen and (max-width:$bp-smallest){
+            display:block;
+        }
     }
 
     &__img-init {
@@ -398,6 +416,10 @@
 
         @media only screen and (max-width:$bp-large){
             left: 13%;
+        }
+
+        @media only screen and (max-width:$bp-smallest){
+            display: none;
         }
     }
 
@@ -417,6 +439,21 @@
             width: 32%;
             left: 7.8%;
             top:14%;
+        }
+
+        @media only screen and (max-width:$bp-smallest){
+            visibility: visible;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            width: 80%;
+            height: auto;
+            transform: scale(1) translate(-50%,-50%);
+
         }
     }
 

@@ -2,8 +2,7 @@
 
 import View from "../veiw";
 import { swipers } from "../swiperView";
-
-import { form } from "./fomView";
+import formView from "../Home/fomView";
 
 import planet1 from "../../../img/Planet/planet-1.webp";
 import planet2 from "../../../img/Planet/planet-2.webp";
@@ -59,7 +58,7 @@ class HomeConsultation extends View {
               <div class="swiper-button-prev process__consult-prev"></div>
             </div>
           </div>
-          ${form}
+          ${formView.generateMarkupForm()}
           <div class="process__firm">
             <h2 class="process__firm__heading heading-2">
               <span>Cooperative manufacturer</span>

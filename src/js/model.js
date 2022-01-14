@@ -1,45 +1,25 @@
 /** @format */
 
-import Home from "../JSON/Home.json";
-
-import firm from "../JSON/firm.json";
 import _ from "lodash";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, child, get, set } from "firebase/database";
+import { getDatabase, ref, child, get, set, push } from "firebase/database";
 import { API_KEY } from "./congfig";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-const firmImgs = [
-  "firm-1",
-  "firm-2",
-  "firm-3",
-  "firm-4",
-  "firm-5",
-  "firm-6",
-  "firm-7",
-  "firm-8",
-  "firm-9",
-  "firm-10",
-  "firm-11",
-  "firm-12",
-  "firm-13",
-  "firm-14",
-].map((img) => require(`../img/firm/${img}.webp`));
-
 const firebaseConfig = {
   apiKey: API_KEY,
-  authDomain: "shunjhin-web.firebaseapp.com",
+  authDomain: "shunjhin-20f67.firebaseapp.com",
   databaseURL:
-    "https://shunjhin-web-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "shunjhin-web",
-  storageBucket: "shunjhin-web.appspot.com",
-  messagingSenderId: "939311086016",
-  appId: "1:939311086016:web:fcbb334f4cac7da5023025",
-  measurementId: "G-5BE8S561RS",
+    "https://shunjhin-20f67-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "shunjhin-20f67",
+  storageBucket: "shunjhin-20f67.appspot.com",
+  messagingSenderId: "409906518299",
+  appId: "1:409906518299:web:5148e8a3d6d25545b19bbe",
+  measurementId: "G-JY887D3SJL",
 };
 
 export const state = {
@@ -51,6 +31,7 @@ export const state = {
 };
 
 const app = initializeApp(firebaseConfig);
+const db = getDatabase();
 const dbRef = ref(getDatabase());
 
 export const CreateStateobject = async function (hash = "home") {
@@ -64,6 +45,20 @@ export const CreateStateobject = async function (hash = "home") {
       state.ourteam = data.ourteam;
       state.consultation = data.consultation;
     } else throw new Error("找不到相對應頁面!!");
+  } catch (error) {
+    alert(error);
+  }
+};
+
+export const writeUserData = async function (data) {
+  try {
+    const { username, phoneNumb, userEmail } = data;
+    const userId = push(ref(db, "users")).key;
+    set(ref(db, "users/" + userId), {
+      name: username,
+      phone: phoneNumb,
+      email: userEmail,
+    });
   } catch (error) {
     alert(error);
   }

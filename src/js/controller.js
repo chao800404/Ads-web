@@ -80,10 +80,8 @@ const controHomePage = async function () {
   homeconsultation.addSwiper();
   popupView.windowRemovePopup();
   spinnerView.removeMarkupSpinner();
-  if (window.innerWidth > 780) {
-    homeourteam.createObserver("0px", 0.25);
-    homefeature.createObserver("0px", 0.25);
-  }
+  homeourteam.createObserver("0px", 0.25);
+  homefeature.createObserver("0px", 0.25);
 };
 
 const controlWebDesignPage = async function () {

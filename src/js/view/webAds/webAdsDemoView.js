@@ -1,5 +1,5 @@
 /** @format */
-
+import _ from "lodash";
 import View from "../veiw";
 import webAdsImg from "../../../img/webads/demo/webAdsDemo.webp";
 

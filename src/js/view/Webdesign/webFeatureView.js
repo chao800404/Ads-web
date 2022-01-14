@@ -1,5 +1,5 @@
 /** @format */
-
+import _ from "lodash";
 import View from "../veiw";
 import webDesignOption_1 from "../../../img/webdesign/feature/webDesignOption-1.webp";
 import webDesignOption_2 from "../../../img/webdesign/feature/webDesignOption-2.webp";

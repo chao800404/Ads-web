@@ -1,5 +1,5 @@
 /** @format */
-
+import _ from "lodash";
 class Scroll {
   _parentElement = document.querySelector(".scrollbar");
   _isDrawing = false;

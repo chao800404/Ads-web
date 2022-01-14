@@ -1,7 +1,7 @@
 /** @format */
 
 import View from "../veiw";
-
+import _ from "lodash";
 class WebDemo extends View {
   _parentElement = document.querySelector(".demos");
 

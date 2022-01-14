@@ -1,5 +1,5 @@
 /** @format */
-
+import _ from "lodash";
 import View from "../veiw";
 const webCreativeImg = require("../../../img/webCreative/creativeDemo.svg");
 

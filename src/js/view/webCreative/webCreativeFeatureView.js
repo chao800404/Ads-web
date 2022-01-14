@@ -1,5 +1,5 @@
 /** @format */
-
+import _ from "lodash";
 import View from "../veiw";
 import h5Creative from "../../../img/webCreative/content/h5.png";
 import dynamicCreative from "../../../img/webCreative/content/dynamic.png";

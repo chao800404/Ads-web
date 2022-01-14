@@ -1,5 +1,6 @@
 /** @format */
 
+import _ from "lodash";
 import View from "../veiw";
 import feature_1 from "../../../img/webads/features/feature_1.jpg";
 import feature_2 from "../../../img/webads/features/feature_2.jpg";

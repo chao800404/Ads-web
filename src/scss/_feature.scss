@@ -568,6 +568,10 @@
         @media only screen and (max-width:$bp-large){
             transform: scale(.65);
         }
+
+        @media only screen and (max-width:$bp-smallest){
+            transform: none;
+        }
     }
 
     &__content-2:hover ~ &__img> &__img-example-1 {
@@ -579,6 +583,10 @@
         @media only screen and (max-width:$bp-large){
             transform: scale(.65);
         }
+
+        @media only screen and (max-width:$bp-smallest){
+            transform: none;
+        }
     }
 
     &__content-3:hover ~ &__img> &__img-example-2 {
@@ -589,6 +597,10 @@
 
         @media only screen and (max-width:$bp-large){
             transform: scale(.65);
+        }
+
+        @media only screen and (max-width:$bp-smallest){
+            transform: none;
         }
     }
 

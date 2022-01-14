@@ -379,6 +379,7 @@
             z-index: 5000;
             visibility: hidden;
             opacity: 0;
+            
         }
 
         
@@ -442,8 +443,6 @@
         }
 
         @media only screen and (max-width:$bp-smallest){
-            visibility: visible;
-            position: absolute;
             top: 50%;
             left: 50%;
             display: flex;
@@ -453,7 +452,15 @@
             width: 80%;
             height: auto;
             transform: scale(1) translate(-50%,-50%);
+            transition:none;
 
+        }
+
+        &-1 {
+            @media only screen and (max-width:$bp-smallest){
+                visibility: visible;
+                position: absolute;
+            } 
         }
     }
 

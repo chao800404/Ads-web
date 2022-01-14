@@ -19,6 +19,7 @@ const severImg3 = require("../../../img/Ads__type/type-3.svg");
 class HomeFeature extends View {
   _parentElement = document.querySelector(".features");
   _featureSeaver;
+  _imgSrc = [interactiveAds, videoAds, staticAds];
 
   _generateMarkup() {
     return `
@@ -63,7 +64,7 @@ class HomeFeature extends View {
           ${adsSvg}
         </div>
 
-        ${[interactiveAds, videoAds, staticAds]
+        ${this._imgSrc
           .map(
             (img, index) =>
               `<img class="feature__server__img-example feature__server__img-example-${
@@ -184,11 +185,9 @@ class HomeFeature extends View {
   creativeAppears(btn) {
     const optionNumb = btn.dataset.option;
     this._featureSeaver = document.querySelector(".feature__server__img");
-    const featurServerImg = document.querySelector(
-      `.feature__server__img-example-${optionNumb}`
-    );
-    this._featureSeaver.style = "visibility:visible; opacity:1";
-    featurServerImg.style = "z-index:200;transition:none";
+    this._featureSeaver.style = "visibility: visible;opacity:1";
+    const img = [staticAds, interactiveAds, videoAds];
+    this._featureSeaver.children[1].src = img[optionNumb - 1];
   }
 
   _closeCreative() {

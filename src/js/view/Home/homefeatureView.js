@@ -73,10 +73,6 @@ class HomeFeature extends View {
           )
           .join("")}
         <img class="feature__server__img-init" src="${googleAdsLogo}" alt="Ads Logo">
-
-        <div class="feature__server__img-close">
-          <lottie-player  src="https://assets5.lottiefiles.com/packages/lf20_JuwbIo.json"  background="transparent"  speed="1"  hover></lottie-player>
-        </div>
         </div>
     </div>
         `;
@@ -178,23 +174,15 @@ class HomeFeature extends View {
       const btn = e.target.closest(".feature__server__content");
       if (!btn) return;
       handler(btn);
-      this._closeCreative();
+      this._changePromptImg(btn);
     });
   }
 
-  creativeAppears(btn) {
+  _changePromptImg(btn) {
+    const promptImg = document.querySelector(".prompt__img");
     const optionNumb = btn.dataset.option;
-    this._featureSeaver = document.querySelector(".feature__server__img");
-    this._featureSeaver.style = "visibility: visible;opacity:1";
-    const img = [staticAds, interactiveAds, videoAds];
-    this._featureSeaver.children[1].src = img[optionNumb - 1];
-  }
-
-  _closeCreative() {
-    const closeBtn = document.querySelector(".feature__server__img-close");
-    closeBtn.addEventListener("click", () => {
-      this._featureSeaver.style = "visibility:hidden; opacity:0";
-    });
+    const imgSrc = [staticAds, interactiveAds, videoAds];
+    promptImg.src = imgSrc[optionNumb - 1];
   }
 }
 

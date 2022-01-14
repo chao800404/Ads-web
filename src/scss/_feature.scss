@@ -368,18 +368,7 @@
 
 
         @media only screen and (max-width:$bp-smallest){
-            position: fixed;
-            top:0;
-            left: 0;
-            background-color: rgba(#111A23,.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            width: 100vw;
-            height: 100vh;
-            z-index: 5000;
-            visibility: hidden;
-            opacity: 0;
-            
+            display: none;
         }
 
         
@@ -393,9 +382,6 @@
             height: 100%;
         }
 
-        @media only screen and (max-width:$bp-smallest){
-            display: none;
-        }
     }
 
     &__img-close {

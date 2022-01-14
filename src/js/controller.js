@@ -47,7 +47,7 @@ import windowView from "./view/windowView";
 import loadView from "./view/loadView";
 import spinnerView from "./view/spinnerView";
 import formView from "./view/Home/fomView";
-import { format } from "prettier";
+import promptView from "./promptView";
 
 const controPageResult = async function () {
   const hash = window.location.hash.slice(1);
@@ -156,7 +156,8 @@ const controlForm = async function (data) {
 };
 
 const controlCreativeBtn = function (btn) {
-  homefeature.creativeAppears(btn);
+  promptView.closePrompt();
+  promptView.togglePrompt();
 };
 
 const init = function () {

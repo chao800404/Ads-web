@@ -1,0 +1,36 @@
+.prompt {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    background-color: rgba(#111,.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+
+
+    &__close {
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top:2rem;
+        left: 2rem;
+    }
+
+    &__img{
+        width: 70%;
+        height: auto;
+    }
+}
+
+
+.prompt--active {
+    visibility: visible;
+    opacity: 1;
+}

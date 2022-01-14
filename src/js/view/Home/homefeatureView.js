@@ -173,8 +173,8 @@ class HomeFeature extends View {
     this._parentElement.addEventListener("click", (e) => {
       const btn = e.target.closest(".feature__server__content");
       if (!btn) return;
-      handler(btn);
       this._changePromptImg(btn);
+      handler(btn);
     });
   }
 

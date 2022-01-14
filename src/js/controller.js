@@ -150,7 +150,9 @@ const controlLoadAnFinish = function () {
 };
 
 const controlForm = async function (data) {
+  if (!data) return;
   await model.writeUserData(data);
+  formView.successSubmit();
 };
 
 const controlCreativeBtn = function (btn) {

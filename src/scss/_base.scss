@@ -107,6 +107,7 @@ a {
   grid-template-columns: [full-start] minmax(2rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content ,20rem) [col-end]) [center-end] minmax(2rem,1fr) [full-end];
   grid-template-rows: 100vh min-content min-content min-content /*repeat(3, min-content)*/;
 
+
   @media only screen and (max-width:$bp-large){
     grid-template-columns: [full-start] 0rem [center-start] repeat(8, [col-start] minmax(1rem ,20rem) [col-end]) [center-end] 0rem [full-end];
   }

@@ -99,8 +99,10 @@ class FormView {
       this._checkPhoneNumb(phoneNumb),
     ].every((correct) => correct === true);
 
-    if (!vacancy) prompt.classList.add("process__form__prompt--active");
-    else {
+    if (!vacancy) {
+      prompt.classList.add("process__form__prompt--active");
+      return;
+    } else {
       prompt.classList.remove("process__form__prompt--active");
       return data;
     }
@@ -120,6 +122,17 @@ class FormView {
     if (/^09[0-9]{8}$/.test(numb) || (+numb.length < 11 && +numb.length > 9))
       return true;
     else return false;
+  }
+
+  successSubmit() {
+    const form = document.querySelector(".process__form");
+    const dom = `
+    <div class="form__success">
+        <lottie-player class="form__success-img" src="https://assets3.lottiefiles.com/private_files/lf30_o0calpsv.json"  background="transparent"  speed="1"  autoplay></lottie-player>
+    </div>
+    `;
+    form.innerHTML = "";
+    form.insertAdjacentHTML("afterbegin", dom);
   }
 }
 

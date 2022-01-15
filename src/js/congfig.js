@@ -1,6 +1,6 @@
 /** @format */
 
-export const ANCHOR = ["Home", "WebDesign", "Creatives", "Aboutus", "notfound"];
+export const ANCHOR = ["Home", "WebDesign", "Creatives", "Aboutus"];
 export const PAGE_BG = ["homeWebBg", "webDesignBg", "creativeBg", "adsBg"];
 export const CENTERSLIDE = true;
 export const SWIPERSPACEBETWEEN = 20;

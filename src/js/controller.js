@@ -40,8 +40,6 @@ import webCreativeFeatureView from "./view/webCreative/webCreativeFeatureView";
 import AdsFeatureView from "./view/webAds/webAdsFeatureView";
 //////////////////////////////////////////////////////////////
 
-import NotFoundView from "./view/NotFoundView";
-
 ///////////////////////////////////////////////////////////////
 import headerView from "./view/headerView";
 import popupView from "./view/popupView";
@@ -63,7 +61,6 @@ const controPageResult = async function () {
     if (hash === ANCHOR[1]) controlWebDesignPage();
     if (hash === ANCHOR[2]) controlWebCreative();
     if (hash === ANCHOR[3]) controlWebAdsPage();
-    if (hash === ANCHOR[4]) controlNotfoundPage();
   } catch (error) {
     alert(error);
   }
@@ -125,10 +122,6 @@ const controlWebAdsPage = function () {
   webAdsDemoView.render(model.state.demo);
   AdsFeatureView.render(model.state.feature);
   spinnerView.removeMarkupSpinner();
-};
-
-const controlNotfoundPage = function () {
-  console.log(true, "notFound");
 };
 
 const controlScroll = function (scrollBtn) {

@@ -1,7 +1,6 @@
 /** @format */
 import _ from "lodash";
 import View from "../veiw";
-const webCreativeImg = require("../../../img/webCreative/creativeDemo.svg");
 
 class WebCreativeView extends View {
   _parentElement = document.querySelector(".demos");

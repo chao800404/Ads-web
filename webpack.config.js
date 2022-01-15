@@ -7,7 +7,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
-const { webpack } = require("webpack");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
@@ -22,6 +21,7 @@ module.exports = {
       dependOn: "shared",
     },
     shared: "lodash",
+    notfound: "./src/js/notfound.js",
   },
   //出口
   output: {
@@ -82,6 +82,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "404.html",
+      template: "src/404.html",
+      chunks: ["notfound"],
     }),
     new MiniCssExtractPlugin({
       filename: "main.[hash].css",

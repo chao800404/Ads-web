@@ -58,6 +58,15 @@ export const writeUserData = async function (data) {
       phone: phoneNumb,
       email: userEmail,
     });
+
+    Email.send({
+      SecureToken: "5259d8aa-8ec7-4d18-9936-fdeb259108d2",
+
+      To: "dds8251@gmail.com",
+      From: "a0921342997@gmail.com",
+      Subject: `客戶寄件 姓名:${username}`,
+      Body: `客戶名稱:${username} \n 客戶電話:${phoneNumb} \n 客戶信箱:${userEmail}`,
+    });
   } catch (error) {
     alert(error);
   }
@@ -78,3 +87,11 @@ export const lottieFileAJAX = async function (urls) {
     alert(error);
   }
 };
+
+Email.send({
+  SecureToken: "C973D7AD-F097-4B95-91F4-40ABC5567812",
+  To: "them@website.com",
+  From: "you@isp.com",
+  Subject: "This is the subject",
+  Body: "And this is the body",
+}).then((message) => alert(message));

@@ -39,6 +39,10 @@ import webAdsDemoView from "./view/webAds/webAdsDemoView";
 import webCreativeFeatureView from "./view/webCreative/webCreativeFeatureView";
 import AdsFeatureView from "./view/webAds/webAdsFeatureView";
 //////////////////////////////////////////////////////////////
+
+import NotFoundView from "./view/NotFoundView";
+
+///////////////////////////////////////////////////////////////
 import headerView from "./view/headerView";
 import popupView from "./view/popupView";
 import scrollView from "./view/scrollView";
@@ -50,15 +54,19 @@ import formView from "./view/Home/fomView";
 import promptView from "./view/promptView";
 
 const controPageResult = async function () {
-  const hash = window.location.hash.slice(1);
-  const load = hash === "" ? undefined : hash;
-  spinnerView.addMarkupSpinner();
-  await model.CreateStateobject(load);
-  if (hash === ANCHOR[0] || hash === "") controHomePage();
-  if (hash === ANCHOR[1]) controlWebDesignPage();
-
-  if (hash === ANCHOR[2]) controlWebCreative();
-  if (hash === ANCHOR[3]) controlWebAdsPage();
+  try {
+    const hash = window.location.hash.slice(1);
+    const load = hash === "" ? undefined : hash;
+    spinnerView.addMarkupSpinner();
+    await model.CreateStateobject(load);
+    if (hash === ANCHOR[0] || hash === "") controHomePage();
+    if (hash === ANCHOR[1]) controlWebDesignPage();
+    if (hash === ANCHOR[2]) controlWebCreative();
+    if (hash === ANCHOR[3]) controlWebAdsPage();
+    if (hash === ANCHOR[4]) controlNotfoundPage();
+  } catch (error) {
+    alert(error);
+  }
   resultPageVeiw.windowsrolltoTop("auto");
 };
 
@@ -117,6 +125,10 @@ const controlWebAdsPage = function () {
   webAdsDemoView.render(model.state.demo);
   AdsFeatureView.render(model.state.feature);
   spinnerView.removeMarkupSpinner();
+};
+
+const controlNotfoundPage = function () {
+  console.log(true, "notFound");
 };
 
 const controlScroll = function (scrollBtn) {

@@ -60,7 +60,7 @@ export const writeUserData = async function (data) {
     });
 
     Email.send({
-      SecureToken: "5259d8aa-8ec7-4d18-9936-fdeb259108d2",
+      SecureToken: process.env.SECURETOKEN,
 
       To: "dds8251@gmail.com",
       From: "a0921342997@gmail.com",

@@ -160,6 +160,11 @@ const controlCreativeBtn = function (btn) {
   promptView.togglePrompt();
 };
 
+const controlAdsbtn = function () {
+  window.location.hash = ANCHOR[0];
+  setTimeout(() => homedemo.addScrollView(), 1000);
+};
+
 const init = function () {
   windowView.addHandlerWindowLoad(controlLoadAn);
   popupView.addHandlerPopup(popupView.windowRemovePopup);
@@ -175,6 +180,7 @@ const init = function () {
   loadView.mouseAnFinish();
   spinnerView.generateMarkupSpinner();
   formView.addHandlerFormSubmit(controlForm);
+  webAdsFeatureView.addHandlerFeatureBtn(controlAdsbtn);
 
   //////////////////////////
   ///mobile

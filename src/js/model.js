@@ -5,21 +5,20 @@ import _ from "lodash";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, child, get, set, push } from "firebase/database";
-import { API_KEY } from "./congfig";
-
+// import { API_KEY } from "./congfig";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: API_KEY,
+  apiKey: process.env.API_KEY,
   authDomain: "shunjhin-20f67.firebaseapp.com",
   databaseURL:
     "https://shunjhin-20f67-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "shunjhin-20f67",
   storageBucket: "shunjhin-20f67.appspot.com",
-  messagingSenderId: "409906518299",
-  appId: "1:409906518299:web:5148e8a3d6d25545b19bbe",
-  measurementId: "G-JY887D3SJL",
+  messagingSenderId: process.env.MESSAGINGSENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 };
 
 export const state = {

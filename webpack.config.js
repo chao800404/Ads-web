@@ -7,6 +7,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
+const { webpack } = require("webpack");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   //入口
@@ -88,6 +90,7 @@ module.exports = {
     new CompressionPlugin(),
     new ImageminWebpWebpackPlugin(),
     new HtmlWebpackInlineSVGPlugin(),
+    new Dotenv(),
   ],
 
   devtool: "source-map",

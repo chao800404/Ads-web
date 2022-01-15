@@ -41,6 +41,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.15.8",
+    "dotenv-webpack": "^7.0.3",
+    "process": "^0.11.10",
     "regenerator-runtime": "^0.13.9"
   }
 }

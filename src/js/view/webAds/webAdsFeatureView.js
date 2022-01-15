@@ -80,6 +80,14 @@ class AdsFeatureView extends View {
     svg.innerHTML = "";
     svg.insertAdjacentHTML("afterbegin", dom);
   };
+
+  addHandlerFeatureBtn(handler) {
+    this._parentElement.addEventListener("click", (e) => {
+      const btn = e.target.closest(".adsFeature_btn");
+      if (!btn) return;
+      handler();
+    });
+  }
 }
 
 export default new AdsFeatureView();

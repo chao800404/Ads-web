@@ -36,7 +36,7 @@ class HomeDemo extends View {
     const form = document.querySelector(".process");
     form.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "center",
     });
   }
 }

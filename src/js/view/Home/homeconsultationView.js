@@ -22,6 +22,10 @@ import firm11 from "../../../img/firm/firm-11.webp";
 import firm12 from "../../../img/firm/firm-12.webp";
 import firm13 from "../../../img/firm/firm-13.webp";
 import firm14 from "../../../img/firm/firm-14.webp";
+import firm15 from "../../../img/firm/firm-15.webp";
+import firm16 from "../../../img/firm/firm-16.webp";
+import firm17 from "../../../img/firm/firm-17.webp";
+import firm18 from "../../../img/firm/firm-18.webp";
 
 const consults = [
   "consult-1",
@@ -152,6 +156,10 @@ class HomeConsultation extends View {
       firm12,
       firm13,
       firm14,
+      firm15,
+      firm16,
+      firm17,
+      firm18,
     ];
     return this._data.firm
       .map(

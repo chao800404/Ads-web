@@ -8,7 +8,6 @@ class WebAdsDemoView extends View {
 
   _generateMarkup() {
     const { title, text } = this._data;
-    console.log(this._data);
     return `
        <div class="template_demo  webAdsDemo">
         <div class="template_demo-container webAdsDemo_container">

@@ -140,7 +140,6 @@ class HomeConsultation extends View {
   }
 
   _generateMakupFirm() {
-    console.log(this._data);
     const firms = [
       firm1,
       firm2,

@@ -10,7 +10,6 @@ class WebCreativeFeatureView extends View {
   _parentElement = document.querySelector(".features");
 
   _generateMarkup() {
-    console.log(this._data);
     return `
     <div class="creativeFeature">
       ${this._generateMarkupContent()}

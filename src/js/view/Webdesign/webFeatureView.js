@@ -6,19 +6,12 @@ import webDesignOption_2 from "../../../img/webdesign/feature/webDesignOption-2.
 import webDesignOption_3 from "../../../img/webdesign/feature/webDesignOption-3.webp";
 import webDesignOption_4 from "../../../img/webdesign/feature/webDesignOption-4.webp";
 import webDesignOption_5 from "../../../img/webdesign/feature/webDesignOption-5.webp";
-// const webDesignContent_1 = require("../../../img/webdesign/feature/feature__content-1.svg");
-// const webDesignContent_2 = require("../../../img/webdesign/feature/feature__content-2.svg");
-// const webDesignContent_3 = require("../../../img/webdesign/feature/feature__content-3.svg");
-// const webDesignContent_4 = require("../../../img/webdesign/feature/feature__content-4.svg");
-// const webDesignContent_5 = require("../../../img/webdesign/feature/feature__content-5.svg");
-// const webDesignContent_6 = require("../../../img/webdesign/feature/feature__content-6.svg");
 
 class WebFeatureView extends View {
   _parentElement = document.querySelector(".features");
 
   _generateMarkup() {
     const { title, menu, introduce } = this._data;
-    console.log(this._data);
     return `
     <div class="webFeature">
       <ul class="webFeature_Option">

@@ -25,8 +25,8 @@ class HomeFeature extends View {
     return `
     <div class="feature">
        <h3 class="feature__title feature__title--active" data-option="0">Web design</h3>
-       <h3 class="feature__title" data-option="1">Creatives</h3>
-       <h3 class="feature__title" data-option="2">Abous us</h3>
+       <h3 class="feature__title" data-option="1">MARKETING</h3>
+       <h3 class="feature__title" data-option="2">CREATIVE</h3>
        <figure class="feature__content">
          <svg class="feature__content-img option-an--1">${webDesign}</svg>
          <h2 class="heading-3 feature__content-heading"> ${

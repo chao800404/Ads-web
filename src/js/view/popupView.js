@@ -5,7 +5,6 @@ class PopupView {
   _frequency = true;
 
   addHandlerPopup(handler) {
-    console.log(this);
     this._parentElement.addEventListener("click", function (e) {
       const close = e.target.closest(".popup__close");
       if (!close) return;
